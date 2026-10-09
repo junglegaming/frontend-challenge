@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.tanstack/
+pnpm-lock.yaml
+public/mockServiceWorker.js
+src/routeTree.gen.ts
+playwright-report/
+test-results/
+audits/reports/

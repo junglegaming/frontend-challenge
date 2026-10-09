@@ -1,0 +1,411 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+/* Roboto Mono self-hosted (weights 400, 500, 700) */
+@import '@fontsource/roboto-mono/400.css';
+@import '@fontsource/roboto-mono/500.css';
+@import '@fontsource/roboto-mono/700.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@media (width < 48rem) {
+  .catalog-layout {
+    padding-bottom: calc(128px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  inset: auto 0 0;
+  z-index: 20;
+  height: calc(90px + env(safe-area-inset-bottom, 0px));
+  isolation: isolate;
+}
+.mobile-nav-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 90px;
+  fill: var(--color-surface-card);
+  filter: drop-shadow(0 -8px 12px rgb(0 0 0 / 45%));
+  pointer-events: none;
+  z-index: -1;
+}
+.mobile-nav::after {
+  content: '';
+  position: absolute;
+  inset: 90px 0 0;
+  background: var(--color-surface-card);
+  z-index: -1;
+}
+.mobile-nav-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 76px 1fr 1fr;
+  align-items: center;
+  height: 90px;
+  padding-inline: 18px;
+}
+.mobile-nav-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  color: #ceb38c;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.mobile-nav-action svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+.mobile-nav-home {
+  width: 20px;
+  height: 20px;
+  background: currentColor;
+  mask: url('/icons/iconly-bold-home-15-5519.svg') center / contain no-repeat;
+}
+.mobile-nav-action[aria-current],
+.mobile-nav-action[aria-pressed='true'] {
+  color: var(--color-primary-light);
+}
+.mobile-nav-scan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: start;
+  width: 62px;
+  height: 62px;
+  margin-top: -29px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff4e3;
+  cursor: pointer;
+}
+.mobile-nav-scan svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.75;
+}
+
+@theme {
+  /* Typography */
+  --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans: var(--font-mono);
+
+  /* Text scale (docs/ESTILOS.md §1.2) */
+  --text-display: 43px;
+  --text-display--line-height: 70px;
+  --text-display--font-weight: 700;
+
+  --text-display-2: 32px;
+  --text-display-2--line-height: 42px;
+  --text-display-2--font-weight: 700;
+
+  --text-h1: 28px;
+  --text-h1--line-height: 37px;
+  --text-h1--font-weight: 700;
+
+  --text-h2: 24px;
+  --text-h2--line-height: 32px;
+  --text-h2--font-weight: 700;
+
+  --text-title: 20px;
+  --text-title--line-height: 28px;
+
+  --text-body-18-bold: 18px;
+  --text-body-18-bold--line-height: 16px;
+  --text-body-18-bold--font-weight: 700;
+  --text-body-18-bold--letter-spacing: 0em;
+
+  --text-body-18-regular: 18px;
+  --text-body-18-regular--line-height: 16px;
+  --text-body-18-regular--font-weight: 400;
+  --text-body-18-regular--letter-spacing: 0em;
+
+  --text-body-17-bold: 17px;
+  --text-body-17-bold--line-height: 16px;
+  --text-body-17-bold--font-weight: 700;
+  --text-body-17-bold--letter-spacing: 0em;
+
+  --text-body-17-regular: 17px;
+  --text-body-17-regular--line-height: 24px;
+  --text-body-17-regular--font-weight: 400;
+  --text-body-17-regular--letter-spacing: 0em;
+
+  --text-body-lg: 16px;
+  --text-body-lg--line-height: 24px;
+
+  --text-body-lg-bold: 16px;
+  --text-body-lg-bold--line-height: 24px;
+  --text-body-lg-bold--font-weight: 700;
+
+  --text-body-lg-medium: 16px;
+  --text-body-lg-medium--line-height: 24px;
+  --text-body-lg-medium--font-weight: 500;
+
+  --text-body: 15px;
+  --text-body--line-height: 24px;
+
+  --text-body-combo: 15px;
+  --text-body-combo--line-height: 16px;
+  --text-body-combo--font-weight: 500;
+  --text-body-combo--letter-spacing: 0em;
+
+  --text-body-regular: 14px;
+  --text-body-regular--line-height: 24px;
+  --text-body-regular--font-weight: 400;
+
+  --text-body-medium: 14px;
+  --text-body-medium--line-height: 16px;
+  --text-body-medium--font-weight: 500;
+
+  --text-body-bold: 14px;
+  --text-body-bold--line-height: 16px;
+  --text-body-bold--font-weight: 700;
+  --text-body-bold--letter-spacing: 0em;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 22px;
+
+  --text-caption: 13px;
+  --text-caption--line-height: 16px;
+
+  --text-caption-bold: 12px;
+  --text-caption-bold--line-height: 14px;
+  --text-caption-bold--font-weight: 700;
+  --text-caption-bold--letter-spacing: 0em;
+
+  --text-tiny: 12px;
+  --text-tiny--line-height: 16px;
+
+  --text-tiny-bold: 9px;
+  --text-tiny-bold--line-height: 11.9px;
+  --text-tiny-bold--font-weight: 700;
+  --text-tiny-bold--letter-spacing: 0em;
+
+  --text-micro: 10px;
+  --text-micro--line-height: 13px;
+  --text-micro--font-weight: 500;
+
+  /* Colors (docs/ESTILOS.md §2.1) */
+  --color-ink: #140d0a;
+  --color-surface-card: #241612;
+  --color-surface-raised: #2f1d15;
+  --color-surface-dark: #38220f;
+  --color-border: #3f2319;
+  --color-border-soft: #55321f;
+  --color-foreground: #f5f1eb;
+  --color-text-secondary: #cfb28c;
+  --color-text-accent: #e89b55;
+  --color-primary: #d28a4c;
+  --color-primary-light: #dd9a5f;
+  --color-primary-dark: #c47b3e;
+  --color-secondary: #b39463;
+  --color-amber: #e3a44e;
+  --color-coral: #ea6b4f;
+  --color-success: #00a66c;
+  --color-error: #ed1b2e;
+  --color-elevated-light: #fbfbfb;
+  --color-gray-light: #ededed;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Brand Colors (docs/ESTILOS.md §2.2) */
+  --color-brand-google-blue: #4086f4;
+  --color-brand-facebook: #3b5999;
+  --color-brand-blue: #4175df;
+  --color-brand-indigo: #283593;
+  --color-brand-light-blue: #03a9f4;
+  --color-brand-orange: #ff641a;
+  --color-brand-google-green: #59c36a;
+  --color-brand-google-yellow: #ffda2d;
+
+  /* Radius (docs/ESTILOS.md §3) */
+  --radius-default: 6px;
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Shadows (docs/ESTILOS.md §3) */
+  --shadow-card: 0 6px 20px rgb(0 0 0 / 45%);
+  --shadow-glow: 0 0 20px rgb(0 0 0 / 45%);
+  --shadow-popover: 0 4px 12px rgb(0 0 0 / 15%);
+  --shadow-cta: 0 0 20px rgb(210 138 76 / 25%);
+
+  /* Brand gradient */
+  --background-image-brand-gradient: linear-gradient(
+    137.05deg,
+    rgba(210, 138, 76, 0.45) -24.6%,
+    #d28a4c 100%
+  );
+}
+
+/* Responsive typography: keep the same utility class at every viewport size. */
+@media (width < 48rem) {
+  :root,
+  .dark {
+    --text-body-medium: 14px;
+    --text-body-regular: 12px;
+    --text-body-regular--line-height: 18px;
+    --text-display: 18px;
+    --text-display--line-height: 29px;
+    --text-body-combo: 14px;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root,
+.dark {
+  --background: #140d0a;
+  --foreground: #f5f1eb;
+  --card: #241612;
+  --card-foreground: #f5f1eb;
+  --popover: #2f1d15;
+  --popover-foreground: #f5f1eb;
+  --primary: #d28a4c;
+  --primary-foreground: #140d0a;
+  --secondary: #b39463;
+  --secondary-foreground: #140d0a;
+  --muted: #2f1d15;
+  --muted-foreground: #cfb28c;
+  --accent: #e89b55;
+  --accent-foreground: #140d0a;
+  --destructive: #ed1b2e;
+  --destructive-foreground: #ffffff;
+  --border: #3f2319;
+  --input: #3f2319;
+  --ring: #d28a4c;
+  --radius: 6px;
+
+  /* Sidebar fallback mapping */
+  --sidebar: #140d0a;
+  --sidebar-foreground: #f5f1eb;
+  --sidebar-primary: #d28a4c;
+  --sidebar-primary-foreground: #140d0a;
+  --sidebar-accent: #2f1d15;
+  --sidebar-accent-foreground: #f5f1eb;
+  --sidebar-border: #3f2319;
+  --sidebar-ring: #d28a4c;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    @apply font-mono;
+  }
+
+  body {
+    @apply bg-ink text-foreground min-h-screen font-mono antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  :where(button) {
+    cursor: pointer;
+  }
+}
+
+/* Skeleton shimmer utility (docs/ESTILOS.md §5) */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface-card) 0%,
+    var(--color-surface-raised) 50%,
+    var(--color-surface-card) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer {
+    animation: none;
+    background: var(--color-surface-raised);
+  }
+}
+@layer base {
+  body {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+  #root {
+    min-width: 0;
+  }
+  img,
+  video,
+  svg {
+    max-width: 100%;
+  }
+  a:hover {
+    color: var(--color-text-accent);
+  }
+  :disabled,
+  [aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:where(img) {
+  display: block;
+  max-width: 100%;
+}

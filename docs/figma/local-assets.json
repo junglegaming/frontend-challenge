@@ -1,0 +1,33 @@
+{
+  "source": "Frontend Challenge.fig",
+  "images": [
+    {
+      "source": "images/8459204731e6eba9d474cbc8ebc37071360d3ba5",
+      "path": "public/assets/nft/golden-signal-160.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "f20b58b99de12b6eceede2090607e4b999275bba95de7674bb14f26b59666b21"
+    },
+    {
+      "source": "images/2986a7cb16d09de8970824d2dd58bf0bb021702c",
+      "path": "public/assets/nft/sage-nomad-009.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "9b25d8d72395aa62f919f6ad33b95b7ba7bbfee6049e95cf159a319b03ecb8d9"
+    },
+    {
+      "source": "images/9df2ff42dd27ba657621c304557d1a855a4be6a5",
+      "path": "public/assets/nft/golden-frequency-071.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "326df4c1c08c31c88b9f407e51be3991e46667183af62aa1501927adc76f52b5"
+    },
+    {
+      "source": "images/87580f2def9af0ce13f4b6f6ce17bb2449bcfc16",
+      "path": "public/assets/nft/violet-nomad-314.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "2a42ba5adc341c3d0e1ad6905058e2762d995fc988113a7cd28b0d15f6a4ba28"
+    }
+  ]
+}

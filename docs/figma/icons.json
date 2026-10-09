@@ -1,0 +1,108 @@
+{
+  "fileKey": "Ff0SksUi7UFtPWUO8kyNtw",
+  "version": "2397163412428844678",
+  "icons": [
+    {
+      "id": "15:5519",
+      "name": "Iconly/Bold/Home",
+      "path": "public/icons/iconly-bold-home-15-5519.svg",
+      "sha256": "221793fbc6bf9bc89b3414423c44d4566f9ea8e2028885dc71d8e4ddf858d9c6"
+    },
+    {
+      "id": "15:5663",
+      "name": "Iconly/Bold/Star",
+      "path": "public/icons/iconly-bold-star-15-5663.svg",
+      "sha256": "143c815e8788552639dd0bb8f4ce113561245f428ffb56c3963f1d75ef9c932f"
+    },
+    {
+      "id": "70420:4613",
+      "name": "Iconly/Curved/Activity",
+      "path": "public/icons/iconly-curved-activity-70420-4613.svg",
+      "sha256": "9fec1b9fb3857d8073453825589107edc385f5e92b02245396f4644733b66945"
+    },
+    {
+      "id": "16:759",
+      "name": "Iconly/Curved/Arrow - Left 2",
+      "path": "public/icons/iconly-curved-arrow-left-2-16-759.svg",
+      "sha256": "2ab39309c21fc5db6d135b9eb99b4a83e94c1412d30f7b4ecfb450c3dfad5533"
+    },
+    {
+      "id": "15:5295",
+      "name": "Iconly/Curved/Arrow - Right",
+      "path": "public/icons/iconly-curved-arrow-right-15-5295.svg",
+      "sha256": "18064ea8737a7876dfb99eac1678d18a44cb8c6c27392011db96956044963e01"
+    },
+    {
+      "id": "4:392",
+      "name": "Iconly/Curved/Arrow - Right 2",
+      "path": "public/icons/iconly-curved-arrow-right-2-4-392.svg",
+      "sha256": "d64527cfdccc0e346beb98dd61e74ca9e74e98ec559e7f056990f5215fbdfcbe"
+    },
+    {
+      "id": "70420:4619",
+      "name": "Iconly/Curved/Danger Triangle",
+      "path": "public/icons/iconly-curved-danger-triangle-70420-4619.svg",
+      "sha256": "8faf94f9c1967a8bd09c66292e03b93a7a5639eea268ad9edd8faac225e5c31f"
+    },
+    {
+      "id": "16:463",
+      "name": "Iconly/Curved/Delete",
+      "path": "public/icons/iconly-curved-delete-16-463.svg",
+      "sha256": "a3e26120b8ca06df15647ce9c996155105eb0e00aec25efdba22fb104aff245f"
+    },
+    {
+      "id": "70420:4616",
+      "name": "Iconly/Curved/Download",
+      "path": "public/icons/iconly-curved-download-70420-4616.svg",
+      "sha256": "aee5dc0cdf33edbfe5000c775a5da30c736487ce5ea46caf6746e6d344ebc30f"
+    },
+    {
+      "id": "15:5488",
+      "name": "Iconly/Curved/Filter",
+      "path": "public/icons/iconly-curved-filter-15-5488.svg",
+      "sha256": "acd75f9de504280d2f34cf92e1024a7c1e29f378ff43202435047c9141cc6be2"
+    },
+    {
+      "id": "16:1302",
+      "name": "Iconly/Curved/Hide",
+      "path": "public/icons/iconly-curved-hide-16-1302.svg",
+      "sha256": "2726b5495ee533c35878674ba76a165787cd831746b6af7239d4629b6208e82b"
+    },
+    {
+      "id": "9:1560",
+      "name": "Iconly/Curved/Image 2",
+      "path": "public/icons/iconly-curved-image-2-9-1560.svg",
+      "sha256": "271d4a93524b3deb3f68d27b03e7e0e8f9aa3cb96ad46e8d87d78de769110c14"
+    },
+    {
+      "id": "70420:4623",
+      "name": "Iconly/Curved/Logout",
+      "path": "public/icons/iconly-curved-logout-70420-4623.svg",
+      "sha256": "6f3b24f45b7f3e2d8384f67b649ae4e77edd593034ff7633ff7ea32fcc388208"
+    },
+    {
+      "id": "23:1379",
+      "name": "Iconly/Curved/Wallet",
+      "path": "public/icons/iconly-curved-wallet-23-1379.svg",
+      "sha256": "37b502dfda490ce76f59c96ebdf6902ef4c3129fc352b92f4bb4ec30164c48f4"
+    },
+    {
+      "id": "I70522:3172;70504:2972",
+      "name": "Iconly/Light-Outline/Hide",
+      "path": "public/icons/iconly-light-outline-hide-I70522-3172;70504-2972.svg",
+      "sha256": "9fd1eaa2e3b34afd5c2e9d5c1ae753bb1547e61127a0e5e36498952563b4c6a5"
+    },
+    {
+      "id": "70420:4602",
+      "name": "Iconly/Light-Outline/Location",
+      "path": "public/icons/iconly-light-outline-location-70420-4602.svg",
+      "sha256": "000c56e7446fb55d222329a0d39d9af8b2bc7ffa1faebbf31116cfaa13216c74"
+    },
+    {
+      "id": "I70522:3841;70504:3243",
+      "name": "Iconly/Two-tone/Arrow - Down 2",
+      "path": "public/icons/iconly-two-tone-arrow-down-2-I70522-3841;70504-3243.svg",
+      "sha256": "2b3556d067c21afde8948f50359e544272f377407a18086721d74fc3b6de0103"
+    }
+  ]
+}

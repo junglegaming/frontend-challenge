@@ -1,0 +1,26 @@
+const enc = (id: string): string => encodeURIComponent(id)
+
+export const endpoints = {
+  signup: '/api/auth/signup',
+  login: '/api/auth/login',
+  session: '/api/auth/session',
+  logout: '/api/auth/logout',
+  nfts: '/api/nfts',
+  nft: (id: string): string => `/api/nfts/${enc(id)}`,
+  favorites: '/api/favorites',
+  favorite: (nftId: string): string => `/api/favorites/${enc(nftId)}`,
+  cart: '/api/cart',
+  cartItems: '/api/cart/items',
+  cartItem: (nftId: string): string => `/api/cart/items/${enc(nftId)}`,
+  cartQuote: '/api/cart/quote',
+  couponsValidate: '/api/coupons/validate',
+  orders: '/api/orders',
+  order: (id: string): string => `/api/orders/${enc(id)}`,
+  profile: '/api/profile',
+  profilePassword: '/api/profile/password',
+  wallets: '/api/wallets',
+  wallet: (id: string): string => `/api/wallets/${enc(id)}`,
+  mockReset: '/api/_mock/reset',
+  mockScenario: '/api/_mock/scenario',
+  mockEmit: '/api/_mock/emit',
+} as const
