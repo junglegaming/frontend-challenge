@@ -1,0 +1,184 @@
+{
+  "environment": {
+    "os": "Windows_NT 10.0.26300",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+    "node": "v22.19.0",
+    "lighthouse": "13.5.0",
+    "browser": "C:\\Users\\Pichau\\AppData\\Local\\ms-playwright\\chromium-1248\\chrome-win64\\chrome.exe",
+    "date": "2026-10-15T19:58:19.138Z",
+    "base": "http://127.0.0.1:5191",
+    "scenario": "standard",
+    "build": "production",
+    "notes": "Sem simplificações exclusivas; imagens, fontes, MSW e Socket.IO ativos."
+  },
+  "results": [
+    {
+      "page": "inicio",
+      "profile": "mobile",
+      "median": {
+        "performance": 86,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100,
+        "largest-contentful-paint": 3507.4702500000008,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 76
+      },
+      "runs": [
+        {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 3483.7,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 80.5
+        },
+        {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 3507.4702500000008,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 76
+        },
+        {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 3530.417,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 76
+        }
+      ]
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "median": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100,
+        "largest-contentful-paint": 821.0477999999999,
+        "cumulative-layout-shift": 0.00009057002314814815,
+        "total-blocking-time": 0
+      },
+      "runs": [
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 821.0477999999999,
+          "cumulative-layout-shift": 0.00009057002314814815,
+          "total-blocking-time": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 876.0324,
+          "cumulative-layout-shift": 0.00009057002314814815,
+          "total-blocking-time": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 805.0608,
+          "cumulative-layout-shift": 0.00009057002314814815,
+          "total-blocking-time": 0
+        }
+      ]
+    },
+    {
+      "page": "detalhe",
+      "profile": "mobile",
+      "median": {
+        "performance": 88,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100,
+        "largest-contentful-paint": 3321.25725,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 59
+      },
+      "runs": [
+        {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 3189.7900000000004,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 59
+        },
+        {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 3321.25725,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 68
+        },
+        {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 3346.01325,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 58
+        }
+      ]
+    },
+    {
+      "page": "detalhe",
+      "profile": "desktop",
+      "median": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100,
+        "largest-contentful-paint": 760.9242500000001,
+        "cumulative-layout-shift": 0,
+        "total-blocking-time": 0
+      },
+      "runs": [
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 757.44925,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 763.241,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 96,
+          "seo": 100,
+          "largest-contentful-paint": 760.9242500000001,
+          "cumulative-layout-shift": 0,
+          "total-blocking-time": 0
+        }
+      ]
+    }
+  ]
+}
