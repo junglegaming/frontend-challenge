@@ -1,0 +1,121 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "react",
+    "typescript",
+    "oxc",
+    "jsx-a11y"
+  ],
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
+    "eslint/no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "regex": "^@/domains/[^/]+/.+",
+            "message": "Importe domínios só pela API pública: @/domains/<domínio> (docs/TEAMS.md)."
+          },
+          {
+            "regex": "^@/pages/",
+            "message": "Páginas não importam outras páginas; rotas usam @/pages/<página> (docs/TEAMS.md)."
+          }
+        ],
+        "paths": [
+          {
+            "name": "lucide-react",
+            "message": "Importe ícones de @/shared/icons (conjunto oficial, specs/001-design-system-standards)."
+          }
+        ]
+      }
+    ],
+    "typescript/no-explicit-any": "error",
+    "typescript/no-unsafe-function-type": "error",
+    "typescript/no-non-null-asserted-optional-chain": "error"
+  },
+  "ignorePatterns": [
+    "src/app/routeTree.gen.ts"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/app/routes/**"
+      ],
+      "rules": {
+        "react/only-export-components": "off",
+        "eslint/no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "regex": "^@/domains/[^/]+/.+",
+                "message": "Importe domínios só pela API pública: @/domains/<domínio> (docs/TEAMS.md)."
+              },
+              {
+                "regex": "^@/pages/[^/]+/.+",
+                "message": "Páginas não importam outras páginas; rotas usam @/pages/<página> (docs/TEAMS.md)."
+              }
+            ],
+            "paths": [
+              {
+                "name": "lucide-react",
+                "message": "Importe ícones de @/shared/icons (conjunto oficial, specs/001-design-system-standards)."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/shared/ui/**"
+      ],
+      "rules": {
+        "react/only-export-components": "off"
+      }
+    },
+    {
+      "files": [
+        "src/shared/**"
+      ],
+      "rules": {
+        "eslint/no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "regex": "^@/(app|pages|domains)(/|$)",
+                "message": "shared/ não depende de app/, pages/ ou domains/ (docs/TEAMS.md)."
+              }
+            ],
+            "paths": [
+              {
+                "name": "lucide-react",
+                "message": "Importe ícones de @/shared/icons (conjunto oficial, specs/001-design-system-standards)."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "src/shared/icons/**",
+        "src/shared/ui/dialog.tsx",
+        "src/shared/ui/sonner.tsx",
+        "src/shared/ui/checkbox.tsx",
+        "src/shared/ui/radio-group.tsx",
+        "src/shared/ui/sheet.tsx"
+      ],
+      "rules": {
+        "eslint/no-restricted-imports": "off"
+      }
+    }
+  ]
+}
