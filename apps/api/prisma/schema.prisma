@@ -1,0 +1,57 @@
+// Prisma schema for apps/api (constitution 1.6.0). It describes the tables created by the original idempotent DDL
+// one-to-one (names, columns, defaults, FK actions, index names), so a branch created before Prisma can be
+// baselined with `prisma migrate resolve --applied 0_init` (specs/010-api-production-backend/research.md, D7).
+//
+// Prisma does not model CHECK constraints: they are written by hand in prisma/migrations/0_init/migration.sql.
+// The database, not only the service, enforces `amount >= 0`.
+
+generator client {
+  provider            = "prisma-client"
+  output              = "../src/generated/prisma"
+  moduleFormat        = "esm"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// Balance of one owner. The row is created by the owner's first credit.
+model Balance {
+  ownerId      String            @id @map("owner_id")
+  amount       BigInt
+  version      BigInt            @default(0)
+  updatedAt    DateTime          @default(now()) @map("updated_at") @db.Timestamptz(6)
+  transactions CoinTransaction[]
+
+  @@map("balances")
+}
+
+/// Immutable ledger entry. Written in the same statement as the balance change it records.
+model CoinTransaction {
+  txId             String   @id @map("tx_id") @db.Uuid
+  ownerId          String   @map("owner_id")
+  direction        String
+  amount           BigInt
+  resultingBalance BigInt   @map("resulting_balance")
+  resultingVersion BigInt   @default(0) @map("resulting_version")
+  idempotencyKey   String?  @map("idempotency_key")
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  balance          Balance  @relation(fields: [ownerId], references: [ownerId], onDelete: NoAction, onUpdate: NoAction)
+
+  // A key is applied at most once per owner; several NULL keys are allowed (no header sent).
+  @@unique([ownerId, idempotencyKey], map: "transactions_owner_idempotency_key")
+  @@index([ownerId, createdAt(sort: Desc), txId(sort: Desc)], map: "transactions_owner_created_idx")
+  @@map("transactions")
+}
+
+/// Administrator account. `id` is the sha256 hex of the normalized e-mail; `passwordHash` is scrypt with salt.
+model Admin {
+  id           String   @id
+  email        String   @unique
+  role         String   @default("admin")
+  passwordHash String   @map("password_hash")
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@map("admins")
+}

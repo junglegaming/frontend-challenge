@@ -1,0 +1,24 @@
+{
+  "name": "nft-marketplace",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nx run web:dev",
+    "dev:api": "nx run api:dev",
+    "dev:coins-server": "pnpm --dir server dev",
+    "dev:all": "concurrently -n web,api,coins -c blue,magenta,green \"nx run web:dev\" \"nx run api:dev\" \"pnpm --dir server dev\"",
+    "build": "nx run-many --target=build",
+    "typecheck": "nx run-many --target=typecheck",
+    "lint": "nx run-many --target=lint",
+    "test:e2e": "nx run web:test:e2e"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6",
+    "nx": "^21.6.3",
+    "vercel": "^48.5.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["nx", "esbuild", "prisma", "@prisma/engines"]
+  }
+}

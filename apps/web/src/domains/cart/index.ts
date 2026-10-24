@@ -1,0 +1,10 @@
+// Public API of the `cart` domain. Other layers import ONLY from here.
+export * from './model/contracts'
+export * from './hooks/use-add-to-cart'
+export * from './hooks/use-cart-count'
+export * from './hooks/use-merge-guest-cart'
+export * from './hooks/use-update-cart-item'
+export * from './hooks/use-remove-cart-item'
+export * from './hooks/use-coupon'
+export * from './hooks/use-cart-quote'
+export { cartQueries, CART_QUERY_KEY } from './api/queries'
