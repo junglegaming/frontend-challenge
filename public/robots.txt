@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout
+Disallow: /profile
+Disallow: /wallets
+Disallow: /favorites
+Disallow: /orders/

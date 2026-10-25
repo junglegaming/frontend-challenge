@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "date": "2026-10-25T20:24:36.889Z",
+    "node": "v20.19.6",
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-1255U",
+    "memory": 16849293312,
+    "base": "http://localhost:4173",
+    "versions": {
+      "lighthouse": "12.8.2",
+      "vite": "6.4.5",
+      "msw": "2.15.0",
+      "@playwright/test": "1.64.1"
+    },
+    "conditions": "Optimized Vite preview, standard MSW, local WebP assets, no external fonts, 3 sequential runs per route and profile. Mobile uses Lighthouse default simulated throttling; desktop uses provided unthrottled local connection.",
+    "chrome": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+  },
+  "medians": [
+    {
+      "route": "/",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "lcp": 3298.68925,
+      "cls": 0.0009113377478845484,
+      "tbt": 49.5
+    },
+    {
+      "route": "/",
+      "formFactor": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 454.395,
+      "cls": 0.0001252409972299169,
+      "tbt": 0
+    },
+    {
+      "route": "/nft/1",
+      "formFactor": "mobile",
+      "scores": {
+        "performance": 74,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 100
+      },
+      "lcp": 3639.7555999999995,
+      "cls": 0.2332626780431824,
+      "tbt": 92
+    },
+    {
+      "route": "/nft/1",
+      "formFactor": "desktop",
+      "scores": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 577.827,
+      "cls": 0.1653382198368729,
+      "tbt": 0
+    }
+  ]
+}
