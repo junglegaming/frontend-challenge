@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/roboto-mono";
+
+@theme inline {
+  --font-sans: 'Roboto Mono Variable', ui-monospace, monospace;
+  --font-heading: var(--font-sans);
+
+  /* Tokens do Figma (docs/figma/notes.md) */
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-surface-dark: var(--surface-dark);
+  --color-border-soft: var(--border-soft);
+  --color-accent-text: var(--accent-text);
+  --color-subtle: var(--subtle);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --animate-shimmer: shimmer 1.3s ease-in-out infinite;
+  @keyframes shimmer {
+    from { background-position: 100% 0; }
+    to { background-position: 0% 0; }
+  }
+  @keyframes shimmer-pulse {
+    50% { opacity: 0.55; }
+  }
+}
+
+/* Tema único (escuro), valores do Figma */
+:root {
+  --ink: #140d0a;
+  --surface: #241612;
+  --surface-dark: #38220f;
+  --border-soft: #55321f;
+  --accent-text: #e89b55;
+  --subtle: #b39463;
+
+  --background: var(--ink);
+  --foreground: #f5f1eb;
+  --card: var(--surface);
+  --card-foreground: #f5f1eb;
+  --popover: var(--surface);
+  --popover-foreground: #f5f1eb;
+  --primary: #d28a4c;
+  --primary-foreground: var(--ink);
+  --secondary: var(--surface-dark);
+  --secondary-foreground: #f5f1eb;
+  --muted: var(--surface);
+  --muted-foreground: #cfb28c;
+  --accent: var(--surface-dark);
+  --accent-foreground: #f5f1eb;
+  --destructive: #f07167;
+  --border: #3f2319;
+  --input: #3f2319;
+  --ring: #e89b55;
+  --radius: 0.25rem;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+}
+
+@layer utilities {
+  .shimmer {
+    background-color: var(--surface-dark);
+    @media (prefers-reduced-motion: no-preference) {
+      /* faixa estreita e clara varrendo da esquerda para a direita */
+      background-image: linear-gradient(
+        100deg,
+        transparent 35%,
+        color-mix(in srgb, var(--accent-text) 38%, transparent) 50%,
+        transparent 65%
+      );
+      background-size: 250% 100%;
+      animation: var(--animate-shimmer);
+    }
+    /* movimento reduzido: sem deslocamento, só um pulso de opacidade */
+    @media (prefers-reduced-motion: reduce) {
+      animation: shimmer-pulse 1.6s ease-in-out infinite;
+    }
+  }
+}

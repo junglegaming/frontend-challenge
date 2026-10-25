@@ -1,0 +1,74 @@
+[
+  {
+    "url": "http://localhost:4174/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost--2026_10_25_19_49_43.report.html",
+    "jsonPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost--2026_10_25_19_49_43.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4174/",
+    "isRepresentativeRun": false,
+    "htmlPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost--2026_10_25_19_49_54.report.html",
+    "jsonPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost--2026_10_25_19_49_54.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4174/nft/emerald-ape-042",
+    "isRepresentativeRun": false,
+    "htmlPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost-nft_emerald_ape_042-2026_10_25_19_50_17.report.html",
+    "jsonPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost-nft_emerald_ape_042-2026_10_25_19_50_17.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4174/nft/emerald-ape-042",
+    "isRepresentativeRun": false,
+    "htmlPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost-nft_emerald_ape_042-2026_10_25_19_50_29.report.html",
+    "jsonPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost-nft_emerald_ape_042-2026_10_25_19_50_29.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4174/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost--2026_10_25_19_50_06.report.html",
+    "jsonPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost--2026_10_25_19_50_06.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  },
+  {
+    "url": "http://localhost:4174/nft/emerald-ape-042",
+    "isRepresentativeRun": true,
+    "htmlPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost-nft_emerald_ape_042-2026_10_25_19_50_40.report.html",
+    "jsonPath": "/Users/victorpolonio123/frontend-challenge/lighthouse-reports/desktop/localhost-nft_emerald_ape_042-2026_10_25_19_50_40.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    }
+  }
+]
