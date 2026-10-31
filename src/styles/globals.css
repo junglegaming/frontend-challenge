@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@theme {
+  --color-background: #130c09;
+  --color-surface: #1d120e;
+  --color-surface-raised: #281912;
+  --color-surface-hover: #352219;
+
+  --color-foreground: #f5eee7;
+  --color-muted: #b5a092;
+  --color-muted-foreground: #8f7968;
+
+  --color-primary: #d9924e;
+  --color-primary-hover: #efa964;
+  --color-primary-foreground: #1b1009;
+
+  --color-border: #39271d;
+  --color-border-strong: #5b3b29;
+
+  --color-success: #6dba91;
+  --color-danger: #e27669;
+
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Courier New", monospace;
+
+  --radius-card: 12px;
+  --radius-control: 6px;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-mono);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
