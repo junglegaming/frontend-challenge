@@ -1,4 +1,5 @@
 import { type Db, getDb, persist, resetDb } from './db'
+import { createNfts } from './fixtures'
 import { dropRealtimeConnections, emitNftUpdated, emitOrderUpdated } from './realtime'
 import { disconnectAllWallets } from './wallet-connections'
 
@@ -122,6 +123,24 @@ function updateNft(db: Db, nftId: string, change: (nft: Db['nfts'][number]) => v
 /** NFT afetado pelos cenários de compra: o mesmo usado nos fluxos de teste. */
 const PURCHASE_SCENARIO_NFT_ID = 'nft-1'
 
+function catalogSignature(nft: Db['nfts'][number]): string {
+  return `${nft.priceEth}:${nft.editions.map((edition) => edition.available).join(',')}`
+}
+
+/**
+ * Restaura o catálogo ao seed antes de cada cenário, preservando a versão
+ * máxima já vista. Assim um cenário não herda preço/estoque de outro e os
+ * eventos continuam monotônicos para o filtro de duplicatas.
+ */
+function resetCatalog(db: Db): void {
+  const previous = new Map(db.nfts.map((nft) => [nft.id, nft]))
+  db.nfts = createNfts().map((seed) => {
+    const current = previous.get(seed.id)
+    if (current) seed.version = Math.max(seed.version, current.version)
+    return seed
+  })
+}
+
 /**
  * Ativa um cenário. Cada chamada parte do estado padrão, então cenários não se
  * acumulam. Nomes desconhecidos equivalem a `default`.
@@ -132,6 +151,8 @@ export function applyScenario(name: string | null): void {
   state = { ...INITIAL_STATE }
   latencyCursor = 0
   const db = getDb()
+  const previousSignatures = new Map(db.nfts.map((nft) => [nft.id, catalogSignature(nft)] as const))
+  resetCatalog(db)
 
   switch (name) {
     case 'empty':
@@ -184,6 +205,21 @@ export function applyScenario(name: string | null): void {
     default:
       break
   }
+
+  persist()
+  let catalogChanged = false
+  const scenarioAlreadyUpdatedCatalog = name === 'price_changed' || name === 'sold_out'
+  for (const nft of db.nfts) {
+    // Esses dois cenários já publicaram o próprio evento; evita toast duplicado.
+    if (scenarioAlreadyUpdatedCatalog && nft.id === PURCHASE_SCENARIO_NFT_ID) continue
+    const previous = previousSignatures.get(nft.id)
+    if (previous !== catalogSignature(nft)) {
+      nft.version += 1
+      emitNftUpdated({ nftId: nft.id, version: nft.version, priceEth: nft.priceEth })
+      catalogChanged = true
+    }
+  }
+  if (catalogChanged) persist()
 }
 
 export function parseScenarioFromUrl(): { scenario: string | null; reset: boolean } {

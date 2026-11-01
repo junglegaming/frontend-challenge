@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Check } from 'lucide-react'
 
@@ -31,7 +31,6 @@ interface SortSelectProps {
  * @returns Seletor de ordenação com menu personalizado.
  */
 export function SortSelect({ value, onChange }: SortSelectProps) {
-  const selectId = useId()
   const [isOpen, setIsOpen] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -72,13 +71,12 @@ export function SortSelect({ value, onChange }: SortSelectProps) {
       ref={containerRef}
       className="relative inline-flex items-center gap-1.5 font-mono text-[15px] leading-5 text-foreground"
     >
-      <label
-        htmlFor={selectId}
+      <span
         className="cursor-pointer font-normal whitespace-nowrap text-foreground"
         onClick={() => setIsOpen((prev) => !prev)}
       >
         Ordenar por:
-      </label>
+      </span>
 
       {/* Botão Gatilho do Dropdown */}
       <button
@@ -147,25 +145,6 @@ export function SortSelect({ value, onChange }: SortSelectProps) {
           })}
         </div>
       )}
-
-      {/* Select nativo oculto para compatibilidade total com testes automatizados e formulários */}
-      <select
-        id={selectId}
-        value={value ?? 'newest'}
-        onChange={(event) => {
-          const option = SORT_OPTIONS.find((item) => item.value === event.target.value)
-          if (option) onChange(option.value)
-        }}
-        aria-label="Ordenar por"
-        tabIndex={-1}
-        className="pointer-events-none absolute h-px w-px overflow-hidden opacity-[0.01]"
-      >
-        {SORT_OPTIONS.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
     </div>
   )
 }

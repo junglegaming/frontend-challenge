@@ -266,6 +266,9 @@ function RegisterPage() {
                   aria-label="Nome de usuário"
                   autoComplete="name"
                   aria-invalid={Boolean(desktopForm.formState.errors.name)}
+                  aria-describedby={
+                    desktopForm.formState.errors.name ? 'register-name-error' : undefined
+                  }
                   className={cn(
                     'h-[40px] w-full rounded-[5px] border border-[#3F2319] bg-transparent px-4 font-mono text-[14px] text-foreground placeholder:text-[#CFB28C] focus:border-primary focus:outline-none transition-colors',
                     desktopForm.formState.errors.name && 'border-error',
@@ -278,7 +281,11 @@ function RegisterPage() {
                   })}
                 />
                 {desktopForm.formState.errors.name && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="register-name-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {desktopForm.formState.errors.name.message}
                   </p>
                 )}
@@ -296,6 +303,9 @@ function RegisterPage() {
                   aria-label="E-mail"
                   autoComplete="email"
                   aria-invalid={Boolean(desktopForm.formState.errors.email)}
+                  aria-describedby={
+                    desktopForm.formState.errors.email ? 'register-email-error' : undefined
+                  }
                   className={cn(
                     'h-[40px] w-full rounded-[5px] border border-[#3F2319] bg-transparent px-4 font-mono text-[14px] text-foreground placeholder:text-[#CFB28C] focus:border-primary focus:outline-none transition-colors',
                     desktopForm.formState.errors.email && 'border-error',
@@ -308,7 +318,11 @@ function RegisterPage() {
                   })}
                 />
                 {desktopForm.formState.errors.email && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="register-email-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {desktopForm.formState.errors.email.message}
                   </p>
                 )}
@@ -327,6 +341,9 @@ function RegisterPage() {
                     aria-label="Senha"
                     autoComplete="new-password"
                     aria-invalid={Boolean(desktopForm.formState.errors.password)}
+                    aria-describedby={
+                      desktopForm.formState.errors.password ? 'register-password-error' : undefined
+                    }
                     className={cn(
                       'h-[40px] w-full rounded-[5px] border border-[#3F2319] bg-transparent pr-10 pl-4 font-mono text-[14px] text-foreground placeholder:text-[#CFB28C] focus:border-primary focus:outline-none transition-colors',
                       desktopForm.formState.errors.password && 'border-error',
@@ -354,7 +371,11 @@ function RegisterPage() {
                   </button>
                 </div>
                 {desktopForm.formState.errors.password && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="register-password-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {desktopForm.formState.errors.password.message}
                   </p>
                 )}
@@ -373,6 +394,11 @@ function RegisterPage() {
                     aria-label="Confirmar senha"
                     autoComplete="new-password"
                     aria-invalid={Boolean(desktopForm.formState.errors.confirmPassword)}
+                    aria-describedby={
+                      desktopForm.formState.errors.confirmPassword
+                        ? 'register-confirm-password-error'
+                        : undefined
+                    }
                     className={cn(
                       'h-[40px] w-full rounded-[5px] border border-[#3F2319] bg-transparent pr-10 pl-4 font-mono text-[14px] text-foreground placeholder:text-[#CFB28C] focus:border-primary focus:outline-none transition-colors',
                       desktopForm.formState.errors.confirmPassword && 'border-error',
@@ -405,7 +431,11 @@ function RegisterPage() {
                   </button>
                 </div>
                 {desktopForm.formState.errors.confirmPassword && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="register-confirm-password-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {desktopForm.formState.errors.confirmPassword.message}
                   </p>
                 )}
@@ -561,6 +591,9 @@ function RegisterPage() {
                   placeholder="Nome de usuário"
                   autoComplete="name"
                   aria-invalid={Boolean(mobileForm.formState.errors.name)}
+                  aria-describedby={
+                    mobileForm.formState.errors.name ? 'mobile-register-name-error' : undefined
+                  }
                   className={cn(
                     'h-[50px] w-full rounded-[10px] border border-[#3F2319] bg-transparent px-4 font-mono text-[14px] text-[#F5F1EB] placeholder:text-[#B39463] focus:border-primary focus:outline-none transition-colors',
                     mobileForm.formState.errors.name && 'border-error',
@@ -573,7 +606,11 @@ function RegisterPage() {
                   })}
                 />
                 {mobileForm.formState.errors.name && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="mobile-register-name-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {mobileForm.formState.errors.name.message}
                   </p>
                 )}
@@ -590,6 +627,9 @@ function RegisterPage() {
                   placeholder="Digite seu e-mail"
                   autoComplete="email"
                   aria-invalid={Boolean(mobileForm.formState.errors.email)}
+                  aria-describedby={
+                    mobileForm.formState.errors.email ? 'mobile-register-email-error' : undefined
+                  }
                   className={cn(
                     'h-[50px] w-full rounded-[10px] border border-[#3F2319] bg-transparent px-4 font-mono text-[14px] text-[#F5F1EB] placeholder:text-[#B39463] focus:border-primary focus:outline-none transition-colors',
                     mobileForm.formState.errors.email && 'border-error',
@@ -602,7 +642,11 @@ function RegisterPage() {
                   })}
                 />
                 {mobileForm.formState.errors.email && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="mobile-register-email-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {mobileForm.formState.errors.email.message}
                   </p>
                 )}
@@ -625,6 +669,11 @@ function RegisterPage() {
                     placeholder="Senha"
                     autoComplete="new-password"
                     aria-invalid={Boolean(mobileForm.formState.errors.password)}
+                    aria-describedby={
+                      mobileForm.formState.errors.password
+                        ? 'mobile-register-password-error'
+                        : undefined
+                    }
                     className="h-full flex-1 bg-transparent font-mono text-[14px] text-[#F5F1EB] placeholder:text-[#B39463] focus:outline-none"
                     {...mobileForm.register('password', {
                       onChange: () => {
@@ -689,7 +738,11 @@ function RegisterPage() {
                   </button>
                 </div>
                 {mobileForm.formState.errors.password && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="mobile-register-password-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {mobileForm.formState.errors.password.message}
                   </p>
                 )}
@@ -712,6 +765,11 @@ function RegisterPage() {
                     placeholder="Confirmar senha"
                     autoComplete="new-password"
                     aria-invalid={Boolean(mobileForm.formState.errors.confirmPassword)}
+                    aria-describedby={
+                      mobileForm.formState.errors.confirmPassword
+                        ? 'mobile-register-confirm-password-error'
+                        : undefined
+                    }
                     className="h-full flex-1 bg-transparent font-mono text-[14px] text-[#F5F1EB] placeholder:text-[#B39463] focus:outline-none"
                     {...mobileForm.register('confirmPassword', {
                       onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -775,7 +833,11 @@ function RegisterPage() {
                   </button>
                 </div>
                 {mobileForm.formState.errors.confirmPassword && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="mobile-register-confirm-password-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {mobileForm.formState.errors.confirmPassword.message}
                   </p>
                 )}

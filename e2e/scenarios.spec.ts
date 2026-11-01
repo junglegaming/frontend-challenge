@@ -1,5 +1,20 @@
 import { expect, test } from '@playwright/test'
 
+test('cenários não acumulam alterações de catálogo', async ({ page }) => {
+  await page.goto('/')
+  await page.waitForFunction(() => window.__kurio !== undefined)
+
+  await page.evaluate(() => window.__kurio!.applyScenario('price_changed'))
+  await expect(page.getByText('2.99 ETH').filter({ visible: true }).first()).toBeVisible({
+    timeout: 10_000,
+  })
+
+  await page.evaluate(() => window.__kurio!.applyScenario('default'))
+  await expect(page.getByText('1.19 ETH').filter({ visible: true }).first()).toBeVisible({
+    timeout: 10_000,
+  })
+})
+
 test('carregamento lento exibe skeleton e depois os dados', async ({ page }) => {
   await page.goto('/?scenario=slow')
 

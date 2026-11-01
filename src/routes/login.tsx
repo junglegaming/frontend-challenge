@@ -238,6 +238,9 @@ function LoginPage() {
                   aria-label="E-mail"
                   autoComplete="email"
                   aria-invalid={Boolean(desktopForm.formState.errors.email)}
+                  aria-describedby={
+                    desktopForm.formState.errors.email ? 'login-email-error' : undefined
+                  }
                   className={cn(
                     'h-[40px] w-full rounded-[5px] border border-[#3F2319] bg-transparent px-4 font-mono text-[14px] text-foreground placeholder:text-[#CFB28C] focus:border-primary focus:outline-none transition-colors',
                     desktopForm.formState.errors.email && 'border-error',
@@ -250,7 +253,11 @@ function LoginPage() {
                   })}
                 />
                 {desktopForm.formState.errors.email && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="login-email-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {desktopForm.formState.errors.email.message}
                   </p>
                 )}
@@ -269,6 +276,9 @@ function LoginPage() {
                     aria-label="Senha"
                     autoComplete="current-password"
                     aria-invalid={Boolean(desktopForm.formState.errors.password)}
+                    aria-describedby={
+                      desktopForm.formState.errors.password ? 'login-password-error' : undefined
+                    }
                     className={cn(
                       'h-[40px] w-full rounded-[5px] border border-[#3F2319] bg-transparent pr-10 pl-4 font-mono text-[16px] text-foreground placeholder:text-[#F5F1EB]/40 focus:border-primary focus:outline-none transition-colors',
                       desktopForm.formState.errors.password && 'border-error',
@@ -291,7 +301,11 @@ function LoginPage() {
                   </button>
                 </div>
                 {desktopForm.formState.errors.password && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="login-password-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {desktopForm.formState.errors.password.message}
                   </p>
                 )}
@@ -459,6 +473,9 @@ function LoginPage() {
                   placeholder="contato@email.com"
                   autoComplete="email"
                   aria-invalid={Boolean(mobileForm.formState.errors.email)}
+                  aria-describedby={
+                    mobileForm.formState.errors.email ? 'mobile-login-email-error' : undefined
+                  }
                   className={cn(
                     'h-[50px] w-full rounded-[10px] border border-[#3F2319] bg-transparent px-4 font-mono text-[14px] text-[#F5F1EB] placeholder:text-[#B39463] focus:border-[#D28A4C] focus:outline-none transition-colors',
                     mobileForm.formState.errors.email && 'border-error',
@@ -471,7 +488,11 @@ function LoginPage() {
                   })}
                 />
                 {mobileForm.formState.errors.email && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="mobile-login-email-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {mobileForm.formState.errors.email.message}
                   </p>
                 )}
@@ -494,6 +515,11 @@ function LoginPage() {
                     placeholder="***********"
                     autoComplete="current-password"
                     aria-invalid={Boolean(mobileForm.formState.errors.password)}
+                    aria-describedby={
+                      mobileForm.formState.errors.password
+                        ? 'mobile-login-password-error'
+                        : undefined
+                    }
                     className="h-full flex-1 bg-transparent font-mono text-[16px] text-[#F5F1EB] placeholder:text-[#F5F1EB] focus:outline-none"
                     {...mobileForm.register('password', {
                       onChange: () => {
@@ -553,7 +579,11 @@ function LoginPage() {
                   </button>
                 </div>
                 {mobileForm.formState.errors.password && (
-                  <p role="alert" className="mt-1 font-mono text-xs text-error">
+                  <p
+                    id="mobile-login-password-error"
+                    role="alert"
+                    className="mt-1 font-mono text-xs text-error"
+                  >
                     {mobileForm.formState.errors.password.message}
                   </p>
                 )}

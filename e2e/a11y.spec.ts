@@ -41,6 +41,20 @@ test.describe('acessibilidade e teclado', () => {
     await expect(page.getByRole('tabpanel')).toContainText(/Baseado em \d+ avaliações/)
   })
 
+  test('erro de login fica associado ao campo', async ({ page, isMobile }) => {
+    await page.goto('/login')
+    const email = page.locator('input[type=email]:visible').first()
+    await email.fill('email-invalido')
+    await page
+      .locator('button:visible', { hasText: /^Entrar$/ })
+      .first()
+      .click()
+
+    const errorId = isMobile ? 'mobile-login-email-error' : 'login-email-error'
+    await expect(email).toHaveAttribute('aria-describedby', errorId)
+    await expect(page.locator(`#${errorId}`)).toBeVisible()
+  })
+
   test('login desktop prende o foco no diálogo', async ({ page, isMobile }) => {
     test.skip(isMobile, 'o modal de login só existe no desktop')
 

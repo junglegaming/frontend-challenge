@@ -14,12 +14,13 @@ test('catálogo: busca, filtros combinados e ordenação refletem na URL', async
   await page.waitForURL(/network=Polygon/)
   await expect(page).toHaveURL(/collection=/)
 
-  await page.getByLabel('Ordenar por').selectOption('price_asc')
+  await page.getByRole('button', { name: 'Listados recentemente' }).click()
+  await page.getByRole('option', { name: 'Menor preço' }).click()
   await page.waitForURL(/sort=price_asc/)
 
   await page.reload()
   await expect(page.getByPlaceholder('Buscar NFTs')).toHaveValue('ape')
-  await expect(page.getByLabel('Ordenar por')).toHaveValue('price_asc')
+  await expect(page.getByRole('button', { name: 'Menor preço' })).toBeVisible()
 })
 
 test('catálogo: busca desktop visível e URL padrão limpa', async ({ page }) => {
