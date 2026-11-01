@@ -138,12 +138,12 @@ headless, Node 22, Linux; mobile com throttling simulado: 150 ms RTT,
 
 | Perfil  | Página       | Performance | Accessibility | Best Practices | SEO |    LCP | CLS |    TBT |
 | ------- | ------------ | ----------: | ------------: | -------------: | --: | -----: | --: | -----: |
-| mobile  | `/`          |          91 |            97 |            100 |  92 | 2,94 s |   0 | 194 ms |
-| mobile  | `/nft/nft-1` |      **89** |           100 |            100 |  92 | 3,06 s |   0 | 199 ms |
-| desktop | `/`          |         100 |            97 |            100 |  92 | 0,77 s |   0 |   0 ms |
-| desktop | `/nft/nft-1` |         100 |           100 |            100 |  92 | 0,79 s |   0 |   0 ms |
+| mobile  | `/`          |          90 |            97 |            100 |  92 | 3,10 s |   0 | 156 ms |
+| mobile  | `/nft/nft-1` |      **87** |           100 |            100 |  92 | 3,33 s |   0 | 197 ms |
+| desktop | `/`          |          99 |            97 |            100 |  92 | 0,84 s |   0 |   4 ms |
+| desktop | `/nft/nft-1` |          99 |           100 |            100 |  92 | 0,98 s |   0 |   2 ms |
 
-**Abaixo da meta:** Performance mobile do detalhe (89, meta 90). Causa: o
+**Abaixo da meta:** Performance mobile do detalhe (87, meta 90). Causa: o
 backend é o próprio navegador. Antes da primeira pintura, o app precisa baixar
 e iniciar o MSW (~164 KB gzip, Service Worker e interceptadores) e só então
 carregar o app — uma cascata que um backend real não teria. No detalhe, a arte
