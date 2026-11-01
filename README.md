@@ -138,19 +138,18 @@ headless, Node 22, Linux; mobile com throttling simulado: 150 ms RTT,
 
 | Perfil  | Página       | Performance | Accessibility | Best Practices | SEO |    LCP | CLS |    TBT |
 | ------- | ------------ | ----------: | ------------: | -------------: | --: | -----: | --: | -----: |
-| mobile  | `/`          |          90 |            97 |            100 |  92 | 3,10 s |   0 | 156 ms |
-| mobile  | `/nft/nft-1` |      **87** |           100 |            100 |  92 | 3,33 s |   0 | 197 ms |
-| desktop | `/`          |          99 |            97 |            100 |  92 | 0,84 s |   0 |   4 ms |
-| desktop | `/nft/nft-1` |          99 |           100 |            100 |  92 | 0,98 s |   0 |   2 ms |
+| mobile  | `/`          |          92 |            97 |            100 |  92 | 3,08 s |   0 | 103 ms |
+| mobile  | `/nft/nft-1` |      **90** |           100 |            100 |  92 | 3,30 s |   0 |  99 ms |
+| desktop | `/`          |         100 |            97 |            100 |  92 | 0,75 s |   0 |   0 ms |
+| desktop | `/nft/nft-1` |          99 |           100 |            100 |  92 | 0,91 s |   0 |   0 ms |
 
-**Abaixo da meta:** Performance mobile do detalhe (87, meta 90). Causa: o
-backend é o próprio navegador. Antes da primeira pintura, o app precisa baixar
-e iniciar o MSW (~164 KB gzip, Service Worker e interceptadores) e só então
-carregar o app — uma cascata que um backend real não teria. No detalhe, a arte
-(LCP) depende ainda da resposta da API simulada. Já aplicados: artes em WebP
-(−94% de bytes), split por rota, zod fora do chunk de entrada, prioridade na
-imagem de LCP e cache imutável dos assets. Detalhes e medições em
-`docs/13-PERFORMANCE.md`.
+**Metas atendidas:** Performance mobile em 90 no detalhe e 92 no início;
+desktop em 100 e 99. O backend é o próprio navegador, então o app ainda baixa e
+inicia o MSW (~164 KB gzip, Service Worker e interceptadores) antes da primeira
+requisição. Foram aplicados: artes em WebP (−94% de bytes), split por rota, zod
+fora do chunk de entrada, prioridade na imagem de LCP, cache imutável dos
+assets e carregamento do `socket.io-client` fora do caminho crítico. Detalhes e
+medições em `docs/13-PERFORMANCE.md`.
 
 > O Lighthouse não enxerga os bytes que passam pelo Service Worker do MSW, então
 > o LCP simulado pode ser otimista em redes muito lentas.

@@ -111,6 +111,22 @@ evento de tempo real, sem erros, e nenhum log `[MSW]` no console.
 - Testes: `typecheck`, `lint`, `test:unit` 49/49; `test:e2e` 103/106 (3 skips
   intencionais de layout mobile).
 
+### Medição final (2026-11-01)
+
+Depois das melhorias de catálogo, galeria, foco, cenários determinísticos e
+carregamento tardio do `socket.io-client`:
+
+| Perfil | Página | Performance | Accessibility | Best Practices | SEO | LCP | CLS | TBT |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| mobile | `/` | 92 | 97 | 100 | 92 | 3,08 s | 0 | 103 ms |
+| mobile | `/nft/nft-1` | **90** | 100 | 100 | 92 | 3,30 s | 0 | 99 ms |
+| desktop | `/` | 100 | 97 | 100 | 92 | 0,75 s | 0 | 0 ms |
+| desktop | `/nft/nft-1` | 99 | 100 | 100 | 92 | 0,91 s | 0 | 0 ms |
+
+Todas as metas do desafio foram atingidas. A margem mobile do detalhe é
+pequena, então qualquer novo código no caminho crítico deve ser medido com três
+execuções antes de ser mantido.
+
 ## 6. Próximas fases (não implementadas)
 
 - **Fase 3** (com benchmark):

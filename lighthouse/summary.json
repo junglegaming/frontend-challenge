@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-01T12:57:48.077Z",
+  "generatedAt": "2026-11-01T13:41:15.795Z",
   "environment": {
     "lighthouse": "12.6.1",
     "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-    "benchmarkIndex": 1941,
+    "benchmarkIndex": 2486.5,
     "node": "v22.23.3",
     "os": "Linux 7.2.9-arch1-1"
   },
@@ -13,16 +13,16 @@
       "url": "/",
       "runs": 3,
       "scores": {
-        "performance": 90,
+        "performance": 92,
         "accessibility": 97,
         "best-practices": 100,
         "seo": 92
       },
       "metrics": {
-        "LCP": 3099,
+        "LCP": 3080,
         "CLS": 0,
-        "TBT": 156,
-        "FCP": 1951
+        "TBT": 103,
+        "FCP": 1934
       },
       "settings": {
         "formFactor": "mobile",
@@ -41,16 +41,16 @@
       "url": "/nft/nft-1",
       "runs": 3,
       "scores": {
-        "performance": 87,
+        "performance": 90,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 92
       },
       "metrics": {
-        "LCP": 3332,
+        "LCP": 3296,
         "CLS": 0,
-        "TBT": 197,
-        "FCP": 2122
+        "TBT": 99,
+        "FCP": 2091
       },
       "settings": {
         "formFactor": "mobile",
@@ -69,16 +69,16 @@
       "url": "/",
       "runs": 3,
       "scores": {
-        "performance": 99,
+        "performance": 100,
         "accessibility": 97,
         "best-practices": 100,
         "seo": 92
       },
       "metrics": {
-        "LCP": 841,
+        "LCP": 754,
         "CLS": 0,
-        "TBT": 4,
-        "FCP": 552
+        "TBT": 0,
+        "FCP": 518
       },
       "settings": {
         "formFactor": "desktop",
@@ -103,10 +103,10 @@
         "seo": 92
       },
       "metrics": {
-        "LCP": 981,
+        "LCP": 906,
         "CLS": 0,
-        "TBT": 2,
-        "FCP": 619
+        "TBT": 0,
+        "FCP": 584
       },
       "settings": {
         "formFactor": "desktop",
