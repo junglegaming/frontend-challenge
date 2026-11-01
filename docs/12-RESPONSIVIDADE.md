@@ -52,9 +52,8 @@ alterado. Não houve mudança de lógica, contratos ou mocks.
 
 ## 3. Resoluções testadas
 
-Ferramenta: `scripts/audit-responsivo.mjs` (Playwright/Chromium, DPR 1,
-`reducedMotion`), logado com `nova@kurio.test`, carrinho com 2–3 itens e um
-pedido confirmado.
+Auditoria local com Playwright/Chromium (DPR 1, `reducedMotion`), logado com
+`nova@kurio.test`, carrinho com 2–3 itens e um pedido confirmado.
 
 - **Larguras:** 320, 360, 375, 414, 600, 768, 900, 1024, 1280, 1440, 1920.
 - **Rotas:** `/`, `/nft/nft-1`, `/carrinho`, `/pagamento`, `/pedido/:id`,
@@ -114,11 +113,7 @@ pedido confirmado.
 
 ## 7. Como reproduzir
 
-```bash
-npm run dev
-node scripts/audit-responsivo.mjs reports/responsivo            # todas as rotas
-node scripts/audit-responsivo.mjs reports/responsivo inicio,carrinho
-```
-
-Saída: um PNG de página inteira por rota × largura e `report.json` com as
-métricas (`reports/` está no `.gitignore`).
+A auditoria foi executada localmente com Playwright/Chromium. O script
+auxiliar não é versionado porque não participa do build nem do deploy. Para
+repetir a inspeção, rode `npm run dev` e verifique as larguras e rotas
+descritas na seção 3.
