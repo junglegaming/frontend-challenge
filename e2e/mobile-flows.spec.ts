@@ -46,7 +46,7 @@ test.describe('mobile: cobertura funcional', () => {
 
     await page.getByRole('button', { name: 'Abrir menu' }).click()
     await page.getByRole('dialog', { name: 'Menu' }).getByRole('button', { name: 'Sair' }).click()
-    expect(await page.evaluate(() => localStorage.getItem('kurio:token'))).toBeNull()
+    await expect.poll(() => page.evaluate(() => localStorage.getItem('kurio:token'))).toBeNull()
   })
 
   test('favoritos: persistem após refresh em mobile', async ({ page }) => {
