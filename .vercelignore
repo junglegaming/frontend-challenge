@@ -1,0 +1,22 @@
+# Arquivos locais e artefatos que não participam do build da Vercel.
+.git
+.github
+.vercel
+node_modules
+dist
+coverage
+.tanstack
+playwright-report
+test-results
+reports
+.lighthouseci
+lighthouse
+design
+docs
+e2e
+specs
+scripts
+
+*.log
+.env
+.env.*

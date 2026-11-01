@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependências e build
+node_modules
+dist
+dist-ssr
+*.local
+.tanstack
+
+
+# Ambiente
+.env
+.env.*
+!.env.example
+
+# Artefatos locais de design
+design/
+
+# Documentação interna de planejamento (apenas os docs referenciados são publicados)
+docs/*
+!docs/12-RESPONSIVIDADE.md
+!docs/13-PERFORMANCE.md
+
+# Vercel
+.vercel/
+
+# Testes e auditoria
+coverage/
+playwright-report/
+test-results/
+.lighthouseci/
+reports/
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Husky
+.husky/_/
+
+# Claude Code (config local)
+.claude/settings.local.json

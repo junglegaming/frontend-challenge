@@ -1,0 +1,5565 @@
+{
+  "frame": {
+    "name": "Desktop / Início",
+    "width": 1440,
+    "height": 3668
+  },
+  "nodes": [
+    {
+      "depth": 0,
+      "id": "2:2",
+      "name": "Desktop / Início",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 3668,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [24, 120, 24, 120],
+      "gap": 96
+    },
+    {
+      "depth": 1,
+      "id": "70353:242",
+      "name": "Top",
+      "type": "FRAME",
+      "x": 120,
+      "y": 24,
+      "w": 1200,
+      "h": 527,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 2,
+      "id": "70522:3240",
+      "name": "Header With Divider",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 45,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 3,
+      "id": "I70522:3240;70504:3015",
+      "name": "Header Row",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 45,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 4,
+      "id": "I70522:3240;70504:3015;70486:509",
+      "name": "Logo",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 160,
+      "h": 34
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:510",
+      "name": "KURIO Wordmark",
+      "type": "TEXT",
+      "x": 0,
+      "y": 8,
+      "w": 48,
+      "h": 18,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "KURIO",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 700,
+      "lh": 18.46,
+      "ls": 1.4000000000000001,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 4,
+      "id": "I70522:3240;70504:3015;70486:511",
+      "name": "Nav",
+      "type": "FRAME",
+      "x": 376,
+      "y": 0,
+      "w": 401,
+      "h": 45,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 40
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:512",
+      "name": "Nav Item",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 58,
+      "h": 45,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 24
+    },
+    {
+      "depth": 6,
+      "id": "I70522:3240;70504:3015;70486:513",
+      "name": "Início",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 58,
+      "h": 21,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Início",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 21.1,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "I70522:3240;70504:3015;70486:514",
+      "name": "Active Underline",
+      "type": "LINE",
+      "x": 0,
+      "y": 45,
+      "w": 58,
+      "h": 0
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:515",
+      "name": "Mercado",
+      "type": "TEXT",
+      "x": 98,
+      "y": 0,
+      "w": 68,
+      "h": 21,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Mercado",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:516",
+      "name": "Criadores",
+      "type": "TEXT",
+      "x": 206,
+      "y": 0,
+      "w": 87,
+      "h": 21,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Criadores",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:517",
+      "name": "Aprenda",
+      "type": "TEXT",
+      "x": 333,
+      "y": 0,
+      "w": 68,
+      "h": 21,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Aprenda",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 4,
+      "id": "I70522:3240;70504:3015;70486:518",
+      "name": "Header Actions",
+      "type": "FRAME",
+      "x": 993,
+      "y": 0,
+      "w": 207,
+      "h": 35,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 28
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:519",
+      "name": "Search Icon",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 8,
+      "w": 20,
+      "h": 20,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:520",
+      "name": "Cart",
+      "type": "GROUP",
+      "x": 48,
+      "y": 6,
+      "w": 31,
+      "h": 24
+    },
+    {
+      "depth": 6,
+      "id": "I70522:3240;70504:3015;70486:521",
+      "name": "Cart Icon",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 0,
+      "w": 24,
+      "h": 24,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 6,
+      "id": "I70522:3240;70504:3015;70486:522",
+      "name": "Badge",
+      "type": "ELLIPSE",
+      "x": 15,
+      "y": 0,
+      "w": 16,
+      "h": 16,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 6,
+      "id": "I70522:3240;70504:3015;70486:523",
+      "name": "Badge Count",
+      "type": "TEXT",
+      "x": 20,
+      "y": 2,
+      "w": 7,
+      "h": 13,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "6",
+      "font": "Roboto Mono",
+      "size": 10,
+      "weight": 500,
+      "lh": 13.19,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 5,
+      "id": "I70522:3240;70504:3015;70486:524",
+      "name": "Login",
+      "type": "GROUP",
+      "x": 107,
+      "y": 0,
+      "w": 100,
+      "h": 35,
+      "radius": 6
+    },
+    {
+      "depth": 6,
+      "id": "I70522:3240;70504:3015;70486:525",
+      "name": "Login Button",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 100,
+      "h": 35,
+      "radius": 6,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "I70522:3240;70504:3015;70486:526",
+      "name": "Login Button Content",
+      "type": "FRAME",
+      "x": 9,
+      "y": 7,
+      "w": 82,
+      "h": 21,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 4
+    },
+    {
+      "depth": 8,
+      "id": "I70522:3240;70504:3015;70486:527",
+      "name": "Iconly/Curved/Logout",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 0,
+      "w": 20,
+      "h": 20
+    },
+    {
+      "depth": 9,
+      "id": "I70522:3240;70504:3015;70486:527;29221:4777",
+      "name": "Logout",
+      "type": "GROUP",
+      "x": 2,
+      "y": 3,
+      "w": 20,
+      "h": 19
+    },
+    {
+      "depth": 10,
+      "id": "I70522:3240;70504:3015;70486:527;29221:4778",
+      "name": "Stroke 1",
+      "type": "VECTOR",
+      "x": 6,
+      "y": 7,
+      "w": 10,
+      "h": 1
+    },
+    {
+      "depth": 10,
+      "id": "I70522:3240;70504:3015;70486:527;29221:4779",
+      "name": "Stroke 3",
+      "type": "VECTOR",
+      "x": 13,
+      "y": 5,
+      "w": 2,
+      "h": 5
+    },
+    {
+      "depth": 10,
+      "id": "I70522:3240;70504:3015;70486:527;29221:4780",
+      "name": "Stroke 4",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 15
+    },
+    {
+      "depth": 8,
+      "id": "I70522:3240;70504:3015;70486:528",
+      "name": "Entrar",
+      "type": "TEXT",
+      "x": 24,
+      "y": 0,
+      "w": 58,
+      "h": 21,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "Entrar",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 500,
+      "lh": 21.1,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 3,
+      "id": "I70522:3240;70504:3016",
+      "name": "Line 1",
+      "type": "LINE",
+      "x": 0,
+      "y": 45,
+      "w": 1200,
+      "h": 0
+    },
+    {
+      "depth": 2,
+      "id": "70347:239",
+      "name": "Hero",
+      "type": "FRAME",
+      "x": 0,
+      "y": 77,
+      "w": 1200,
+      "h": 450,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, 40]
+    },
+    {
+      "depth": 3,
+      "id": "2:104",
+      "name": "Rectangle 3",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 450
+    },
+    {
+      "depth": 3,
+      "id": "70342:2674",
+      "name": "Frame 137",
+      "type": "FRAME",
+      "x": 40,
+      "y": 0,
+      "w": 1160,
+      "h": 450,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 110
+    },
+    {
+      "depth": 4,
+      "id": "70342:2672",
+      "name": "Frame 135",
+      "type": "FRAME",
+      "x": 0,
+      "y": 43,
+      "w": 600,
+      "h": 364,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 44
+    },
+    {
+      "depth": 5,
+      "id": "70342:2671",
+      "name": "Frame 134",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 600,
+      "h": 312,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 6,
+      "id": "70342:2670",
+      "name": "Frame 133",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 600,
+      "h": 240,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 4
+    },
+    {
+      "depth": 7,
+      "id": "70342:2669",
+      "name": "Frame 132",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 600,
+      "h": 164,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 8
+    },
+    {
+      "depth": 8,
+      "id": "3:113",
+      "name": "Bem-vindo à Kurio",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 600,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Bem-vindo à Kurio",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 500,
+      "lh": 16,
+      "ls": 1.4000000000000001,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "3:107",
+      "name": "OWN THE FUTURE OF\nDIGITAL ART",
+      "type": "TEXT",
+      "x": 0,
+      "y": 24,
+      "w": 600,
+      "h": 140,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
+      "font": "Roboto Mono",
+      "size": 43,
+      "weight": 700,
+      "lh": 70,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "3:114",
+      "name": "Discover curated NFTs from emerging and established creators. Collect rare digit",
+      "type": "TEXT",
+      "x": 0,
+      "y": 168,
+      "w": 557,
+      "h": 72,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Descubra NFTs selecionados de criadores emergentes e consagrados. Colecione arte digital rara, apoie artistas e tenha uma parte da cultura da internet.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 24,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 6,
+      "id": "70342:2667",
+      "name": "Frame 131",
+      "type": "FRAME",
+      "x": 0,
+      "y": 272,
+      "w": 140,
+      "h": 40,
+      "radius": 6,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [10, 36, 10, 28],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "3:127",
+      "name": "EXPLORAR",
+      "type": "TEXT",
+      "x": 28,
+      "y": 10,
+      "w": 77,
+      "h": 20,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "EXPLORAR",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 20,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 5,
+      "id": "3:131",
+      "name": "Group 4",
+      "type": "GROUP",
+      "x": 560,
+      "y": 356,
+      "w": 40,
+      "h": 8
+    },
+    {
+      "depth": 6,
+      "id": "3:128",
+      "name": "Ellipse 2",
+      "type": "ELLIPSE",
+      "x": 16,
+      "y": 0,
+      "w": 8,
+      "h": 8,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 6,
+      "id": "3:129",
+      "name": "Ellipse 3",
+      "type": "ELLIPSE",
+      "x": 32,
+      "y": 0,
+      "w": 8,
+      "h": 8,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 6,
+      "id": "3:130",
+      "name": "Ellipse 4",
+      "type": "ELLIPSE",
+      "x": 0,
+      "y": 0,
+      "w": 8,
+      "h": 8,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70342:2673",
+      "name": "Frame 136",
+      "type": "FRAME",
+      "x": 710,
+      "y": 0,
+      "w": 450,
+      "h": 450,
+      "radius": 24,
+      "fill": {
+        "type": "IMAGE"
+      },
+      "layout": "HORIZONTAL",
+      "pad": [280, 290, 50, 40],
+      "gap": 10
+    },
+    {
+      "depth": 1,
+      "id": "70342:2831",
+      "name": "Products",
+      "type": "FRAME",
+      "x": 120,
+      "y": 647,
+      "w": 1200,
+      "h": 1373,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 48
+    },
+    {
+      "depth": 2,
+      "id": "70410:3725",
+      "name": "Sidebar",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 310,
+      "h": 1279,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 24
+    },
+    {
+      "depth": 3,
+      "id": "70485:382",
+      "name": "Filters",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 0,
+      "w": 310,
+      "h": 785,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [20, 20, 20, 20]
+    },
+    {
+      "depth": 4,
+      "id": "I70485:382;70485:317",
+      "name": "Frame 140",
+      "type": "FRAME",
+      "x": 20,
+      "y": 20,
+      "w": 270,
+      "h": 745,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 40
+    },
+    {
+      "depth": 5,
+      "id": "I70485:382;70485:318",
+      "name": "Collections Filter",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 270,
+      "h": 388,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 6,
+      "id": "I70485:382;70485:319",
+      "name": "Coleções",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 87,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Coleções",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70485:382;70485:320",
+      "name": "List",
+      "type": "FRAME",
+      "x": 0,
+      "y": 28,
+      "w": 270,
+      "h": 360,
+      "layout": "VERTICAL",
+      "pad": [null, 12, null, 12]
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:321",
+      "name": "Frame 382",
+      "type": "FRAME",
+      "x": 12,
+      "y": 0,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:322",
+      "name": "Frame 373",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 109,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:323",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 109,
+      "h": 40,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Arte digital",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:324",
+      "name": "(33)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "(33)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:325",
+      "name": "Frame 383",
+      "type": "FRAME",
+      "x": 12,
+      "y": 40,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:326",
+      "name": "Frame 374",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 91,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:327",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 91,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Fotografia",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:328",
+      "name": "(12)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(12)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:329",
+      "name": "Frame 384",
+      "type": "FRAME",
+      "x": 12,
+      "y": 80,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:330",
+      "name": "Frame 375",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 55,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:331",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 55,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Música",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:332",
+      "name": "(65)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(65)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:333",
+      "name": "Frame 385",
+      "type": "FRAME",
+      "x": 12,
+      "y": 120,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:334",
+      "name": "Frame 376",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 64,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:335",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 64,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Arte 3D",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:336",
+      "name": "(39)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(39)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:337",
+      "name": "Frame 390",
+      "type": "FRAME",
+      "x": 12,
+      "y": 160,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:338",
+      "name": "Frame 377",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 118,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:339",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 118,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Colecionáveis",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:340",
+      "name": "(23)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(23)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:341",
+      "name": "Frame 389",
+      "type": "FRAME",
+      "x": 12,
+      "y": 200,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:342",
+      "name": "Frame 378",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 91,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:343",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 91,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Generativa",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:344",
+      "name": "(17)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(17)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:345",
+      "name": "Frame 388",
+      "type": "FRAME",
+      "x": 12,
+      "y": 240,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:346",
+      "name": "Frame 379",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 46,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:347",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 46,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Jogos",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:348",
+      "name": "(19)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(19)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:349",
+      "name": "Frame 387",
+      "type": "FRAME",
+      "x": 12,
+      "y": 280,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:350",
+      "name": "Frame 380",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 100,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:351",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 100,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Assinaturas",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:352",
+      "name": "(13)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(13)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:353",
+      "name": "Frame 386",
+      "type": "FRAME",
+      "x": 12,
+      "y": 320,
+      "w": 246,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:354",
+      "name": "Frame 381",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 82,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70485:382;70485:355",
+      "name": "Digital Art\nPhotography\nMusic\n3D Art\nCollectibles\nGenerative\nGaming\nMemberships\n",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 82,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Utilidade",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:356",
+      "name": "(18)",
+      "type": "TEXT",
+      "x": 209,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(18)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 700,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "I70485:382;70485:357",
+      "name": "Price Filter",
+      "type": "FRAME",
+      "x": 0,
+      "y": 428,
+      "w": 270,
+      "h": 129,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 6,
+      "id": "I70485:382;70485:358",
+      "name": "Faixa de preço",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 152,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Faixa de preço",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70485:382;70485:359",
+      "name": "Controls",
+      "type": "FRAME",
+      "x": 0,
+      "y": 28,
+      "w": 270,
+      "h": 101,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, 12],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:360",
+      "name": "Slider",
+      "type": "FRAME",
+      "x": 12,
+      "y": 0,
+      "w": 258,
+      "h": 21,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:361",
+      "name": "Ellipse 5",
+      "type": "ELLIPSE",
+      "x": 3,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:362",
+      "name": "Line 6",
+      "type": "LINE",
+      "x": 21,
+      "y": 13,
+      "w": 161,
+      "h": 0
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:363",
+      "name": "Ellipse 6",
+      "type": "ELLIPSE",
+      "x": 185,
+      "y": 3,
+      "w": 15,
+      "h": 15,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:364",
+      "name": "Line 5",
+      "type": "LINE",
+      "x": 203,
+      "y": 13,
+      "w": 55,
+      "h": 0
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:365",
+      "name": "Frame 391",
+      "type": "FRAME",
+      "x": 12,
+      "y": 33,
+      "w": 258,
+      "h": 20,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:366",
+      "name": "Preço: 0,02 - 12,30 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 208,
+      "h": 20,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Preço: 0,02 - 12,30 ETH",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 19.78,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:367",
+      "name": "Apply Button",
+      "type": "FRAME",
+      "x": 12,
+      "y": 65,
+      "w": 92,
+      "h": 36,
+      "radius": 6,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [8, 12, 8, 12]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:368",
+      "name": "Aplicar",
+      "type": "TEXT",
+      "x": 12,
+      "y": 8,
+      "w": 68,
+      "h": 20,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "Aplicar",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 20,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 5,
+      "id": "I70485:382;70485:369",
+      "name": "Network Filter",
+      "type": "FRAME",
+      "x": 0,
+      "y": 597,
+      "w": 270,
+      "h": 148,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 6,
+      "id": "I70485:382;70485:370",
+      "name": "Rede",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 44,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Rede",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70485:382;70485:371",
+      "name": "List",
+      "type": "FRAME",
+      "x": 0,
+      "y": 28,
+      "w": 270,
+      "h": 120,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, 12]
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:372",
+      "name": "Frame 392",
+      "type": "FRAME",
+      "x": 12,
+      "y": 0,
+      "w": 258,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:373",
+      "name": "Ethereum\nPolygon\nSolana",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 73,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Ethereum",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:374",
+      "name": "(119)",
+      "type": "TEXT",
+      "x": 212,
+      "y": 0,
+      "w": 46,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(119)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:375",
+      "name": "Frame 393",
+      "type": "FRAME",
+      "x": 12,
+      "y": 40,
+      "w": 258,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:376",
+      "name": "Ethereum\nPolygon\nSolana",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 64,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Polygon",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:377",
+      "name": "(78)",
+      "type": "TEXT",
+      "x": 221,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(78)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 7,
+      "id": "I70485:382;70485:378",
+      "name": "Frame 394",
+      "type": "FRAME",
+      "x": 12,
+      "y": 80,
+      "w": 258,
+      "h": 40,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:379",
+      "name": "Ethereum\nPolygon\nSolana",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 55,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Solana",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 8,
+      "id": "I70485:382;70485:380",
+      "name": "(86)",
+      "type": "TEXT",
+      "x": 221,
+      "y": 0,
+      "w": 37,
+      "h": 40,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "(86)",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 40,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 3,
+      "id": "70410:3791",
+      "name": "Featured NFT Banner",
+      "type": "FRAME",
+      "x": 0,
+      "y": 809,
+      "w": 310,
+      "h": 470,
+      "fill": {
+        "type": "GRADIENT_LINEAR"
+      },
+      "layout": "HORIZONTAL",
+      "pad": [24, null, 4, null],
+      "gap": 10
+    },
+    {
+      "depth": 4,
+      "id": "70410:3792",
+      "name": "Frame 396",
+      "type": "FRAME",
+      "x": 0,
+      "y": 24,
+      "w": 310,
+      "h": 448,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 16
+    },
+    {
+      "depth": 5,
+      "id": "70410:3793",
+      "name": "Frame 395",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 310,
+      "h": 64,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 16
+    },
+    {
+      "depth": 6,
+      "id": "70410:3794",
+      "name": "Frame 397",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 310,
+      "h": 32,
+      "layout": "HORIZONTAL",
+      "pad": [null, 20, null, 20],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "70410:3795",
+      "name": "NFT EM DESTAQUE",
+      "type": "TEXT",
+      "x": 20,
+      "y": 0,
+      "w": 270,
+      "h": 32,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "NFT EM DESTAQUE",
+      "font": "Roboto Mono",
+      "size": 24,
+      "weight": 700,
+      "lh": 32,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70410:3796",
+      "name": "Frame 398",
+      "type": "FRAME",
+      "x": 0,
+      "y": 48,
+      "w": 310,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, 20, null, 20],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "70410:3797",
+      "name": "OFERTA LIMITADA",
+      "type": "TEXT",
+      "x": 20,
+      "y": 0,
+      "w": 270,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "OFERTA LIMITADA",
+      "font": "Roboto Mono",
+      "size": 22,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "70410:3798",
+      "name": "NFT Artwork 18",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 80,
+      "w": 310,
+      "h": 368,
+      "radius": 22,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70410:3799",
+      "name": "Rectangle 30",
+      "type": "RECTANGLE",
+      "x": 16,
+      "y": 299,
+      "w": 22,
+      "h": 22,
+      "radius": 7
+    },
+    {
+      "depth": 4,
+      "id": "70410:3800",
+      "name": "Rectangle 31",
+      "type": "RECTANGLE",
+      "x": 248,
+      "y": 343,
+      "w": 45,
+      "h": 45,
+      "radius": 29,
+      "fill": {
+        "type": "GRADIENT_LINEAR"
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70410:3801",
+      "name": "Rectangle 32",
+      "type": "RECTANGLE",
+      "x": 38,
+      "y": 105,
+      "w": 15,
+      "h": 15,
+      "radius": 29,
+      "fill": {
+        "type": "GRADIENT_LINEAR"
+      }
+    },
+    {
+      "depth": 2,
+      "id": "70342:2830",
+      "name": "Product Grid",
+      "type": "FRAME",
+      "x": 358,
+      "y": 0,
+      "w": 842,
+      "h": 1373,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 88
+    },
+    {
+      "depth": 3,
+      "id": "70342:2829",
+      "name": "Frame 233",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 842,
+      "h": 1250,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 4,
+      "id": "70351:239",
+      "name": "Toolbar",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 842,
+      "h": 18,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 5,
+      "id": "70351:240",
+      "name": "Tabs",
+      "type": "FRAME",
+      "x": 0,
+      "y": 1,
+      "w": 376,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 20
+    },
+    {
+      "depth": 6,
+      "id": "4:138",
+      "name": "Todos os NFTs",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 118,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Todos os NFTs",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 500,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "4:144",
+      "name": "Novos lançamentos",
+      "type": "TEXT",
+      "x": 138,
+      "y": 0,
+      "w": 154,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Novos lançamentos",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 500,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "4:145",
+      "name": "Em alta",
+      "type": "TEXT",
+      "x": 312,
+      "y": 0,
+      "w": 64,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Em alta",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 500,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "70351:241",
+      "name": "Sort",
+      "type": "FRAME",
+      "x": 542,
+      "y": 0,
+      "w": 300,
+      "h": 18
+    },
+    {
+      "depth": 6,
+      "id": "4:147",
+      "name": "Ordenar por:",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 109,
+      "h": 20,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Ordenar por:",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 19.78,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "4:148",
+      "name": "Listados recentemente",
+      "type": "TEXT",
+      "x": 110,
+      "y": 0,
+      "w": 190,
+      "h": 20,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Listados recentemente",
+      "font": "Roboto Mono",
+      "size": 15,
+      "weight": 400,
+      "lh": 19.78,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "4:152",
+      "name": "Iconly/Two-tone/Arrow - Down 2",
+      "type": "INSTANCE",
+      "x": 278,
+      "y": 2,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "depth": 7,
+      "id": "I4:152;16162:1094",
+      "name": "Iconly/Two-tone/Arrow - Down 2",
+      "type": "INSTANCE",
+      "x": 0,
+      "y": 0,
+      "w": 16,
+      "h": 16
+    },
+    {
+      "depth": 8,
+      "id": "I4:152;16162:1094;0:4170",
+      "name": "Arrow - Down 2",
+      "type": "GROUP",
+      "x": 3,
+      "y": 6,
+      "w": 9,
+      "h": 5
+    },
+    {
+      "depth": 9,
+      "id": "I4:152;16162:1094;0:4171",
+      "name": "Stroke 1",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 0,
+      "w": 9,
+      "h": 5
+    },
+    {
+      "depth": 5,
+      "id": "4:146",
+      "name": "Line 3",
+      "type": "LINE",
+      "x": 0,
+      "y": 23,
+      "w": 101,
+      "h": 0
+    },
+    {
+      "depth": 4,
+      "id": "70342:2828",
+      "name": "Grid Rows",
+      "type": "FRAME",
+      "x": 0,
+      "y": 50,
+      "w": 842,
+      "h": 1200,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 72
+    },
+    {
+      "depth": 5,
+      "id": "70342:2802",
+      "name": "Frame 206",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 842,
+      "h": 356,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 6,
+      "id": "70342:2678",
+      "name": "Frame 141",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 356,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "3:133",
+      "name": "Rectangle 6",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 7,
+      "id": "4:165",
+      "name": "Emerald Ape #042",
+      "type": "TEXT",
+      "x": 0,
+      "y": 312,
+      "w": 258,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Emerald Ape #042",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "4:166",
+      "name": "1.19 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 340,
+      "w": 258,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "1.19 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 7,
+      "id": "4:137",
+      "name": "NFT Artwork 03",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 31,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 6,
+      "id": "70342:2679",
+      "name": "Frame 142",
+      "type": "FRAME",
+      "x": 292,
+      "y": 0,
+      "w": 258,
+      "h": 356,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "3:134",
+      "name": "Rectangle 7",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 7,
+      "id": "4:167",
+      "name": "Sage Nomad #009",
+      "type": "TEXT",
+      "x": 0,
+      "y": 312,
+      "w": 258,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Sage Nomad #009",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "4:168",
+      "name": "1.69 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 340,
+      "w": 258,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "1.69 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 7,
+      "id": "4:162",
+      "name": "NFT Artwork 04",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 25,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 6,
+      "id": "70342:2681",
+      "name": "Frame 144",
+      "type": "FRAME",
+      "x": 584,
+      "y": 0,
+      "w": 258,
+      "h": 356,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "3:135",
+      "name": "Rectangle 8",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 7,
+      "id": "4:169",
+      "name": "Neon Vessel #552",
+      "type": "TEXT",
+      "x": 0,
+      "y": 312,
+      "w": 258,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Neon Vessel #552",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "70342:2680",
+      "name": "Frame 143",
+      "type": "FRAME",
+      "x": 0,
+      "y": 340,
+      "w": 186,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 8,
+      "id": "4:170",
+      "name": "1.99 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 87,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "1.99 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 8,
+      "id": "4:171",
+      "name": "2.29 ETH",
+      "type": "TEXT",
+      "x": 99,
+      "y": 0,
+      "w": 87,
+      "h": 16,
+      "fill": {
+        "color": "#B39463",
+        "opacity": 1
+      },
+      "text": "2.29 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 400,
+      "lh": 16,
+      "color": "#B39463"
+    },
+    {
+      "depth": 7,
+      "id": "4:164",
+      "name": "NFT Artwork 05",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 24,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 5,
+      "id": "70342:2826",
+      "name": "Frame 230",
+      "type": "FRAME",
+      "x": 0,
+      "y": 428,
+      "w": 842,
+      "h": 350,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 6,
+      "id": "70342:2805",
+      "name": "Frame 209",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 350,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "70342:2803",
+      "name": "Frame 207",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [6, 12, 8, 20],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "4:280",
+      "name": "NFT Artwork 06",
+      "type": "RECTANGLE",
+      "x": 20,
+      "y": 6,
+      "w": 224,
+      "h": 286,
+      "radius": 13,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 7,
+      "id": "70342:2804",
+      "name": "Frame 208",
+      "type": "FRAME",
+      "x": 0,
+      "y": 312,
+      "w": 164,
+      "h": 38,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 6
+    },
+    {
+      "depth": 8,
+      "id": "4:224",
+      "name": "Cosmic Bloom #118",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 164,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Cosmic Bloom #118",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "4:227",
+      "name": "1.29 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 22,
+      "w": 164,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "1.29 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70342:2808",
+      "name": "Frame 212",
+      "type": "FRAME",
+      "x": 292,
+      "y": 0,
+      "w": 258,
+      "h": 350,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "70342:2807",
+      "name": "Frame 211",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [24, 4, 28, 4],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "4:282",
+      "name": "NFT Artwork 07",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 24,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 7,
+      "id": "70342:2806",
+      "name": "Frame 210",
+      "type": "FRAME",
+      "x": 0,
+      "y": 312,
+      "w": 164,
+      "h": 38,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 6
+    },
+    {
+      "depth": 8,
+      "id": "4:225",
+      "name": "Violet Nomad #314",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 164,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Violet Nomad #314",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "4:228",
+      "name": "1.39 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 22,
+      "w": 164,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "1.39 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70342:2811",
+      "name": "Frame 215",
+      "type": "FRAME",
+      "x": 584,
+      "y": 0,
+      "w": 258,
+      "h": 350,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "70342:2810",
+      "name": "Frame 214",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [24, 4, 28, 4],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "4:284",
+      "name": "NFT Artwork 08",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 24,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 7,
+      "id": "70342:2809",
+      "name": "Frame 213",
+      "type": "FRAME",
+      "x": 0,
+      "y": 312,
+      "w": 154,
+      "h": 38,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 6
+    },
+    {
+      "depth": 8,
+      "id": "4:226",
+      "name": "Ivory Baron #088",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 154,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Ivory Baron #088",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "4:229",
+      "name": "1.79 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 22,
+      "w": 154,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "1.79 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 5,
+      "id": "70342:2827",
+      "name": "Frame 231",
+      "type": "FRAME",
+      "x": 0,
+      "y": 850,
+      "w": 842,
+      "h": 350,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 6,
+      "id": "70342:2814",
+      "name": "Frame 218",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 350,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "70342:2812",
+      "name": "Frame 216",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [20, 4, 32, 4],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "4:286",
+      "name": "NFT Artwork 09",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 20,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 7,
+      "id": "70342:2813",
+      "name": "Frame 217",
+      "type": "FRAME",
+      "x": 0,
+      "y": 312,
+      "w": 154,
+      "h": 38,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 6
+    },
+    {
+      "depth": 8,
+      "id": "4:251",
+      "name": "Golden Beat #207",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 154,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Golden Beat #207",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "4:254",
+      "name": "0.99 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 22,
+      "w": 154,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "0.99 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70342:2816",
+      "name": "Frame 220",
+      "type": "FRAME",
+      "x": 292,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [28, 4, 24, 4],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "4:289",
+      "name": "NFT Artwork 10",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 28,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 6,
+      "id": "70342:2819",
+      "name": "Frame 223",
+      "type": "FRAME",
+      "x": 584,
+      "y": 0,
+      "w": 258,
+      "h": 350,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 7,
+      "id": "70342:2817",
+      "name": "Frame 221",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 258,
+      "h": 300,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [20, 4, 32, 4],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "4:291",
+      "name": "NFT Artwork 11",
+      "type": "RECTANGLE",
+      "x": 4,
+      "y": 20,
+      "w": 250,
+      "h": 250,
+      "radius": 15,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 7,
+      "id": "70342:2818",
+      "name": "Frame 222",
+      "type": "FRAME",
+      "x": 0,
+      "y": 312,
+      "w": 173,
+      "h": 38,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 6
+    },
+    {
+      "depth": 8,
+      "id": "4:253",
+      "name": "Golden Signal #160",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 173,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Golden Signal #160",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "4:256",
+      "name": "0.39 ETH",
+      "type": "TEXT",
+      "x": 0,
+      "y": 22,
+      "w": 173,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "0.39 ETH",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 3,
+      "id": "70342:2825",
+      "name": "Pagination",
+      "type": "FRAME",
+      "x": 635,
+      "y": 1338,
+      "w": 207,
+      "h": 35,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 8
+    },
+    {
+      "depth": 4,
+      "id": "70342:2820",
+      "name": "Frame 224",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 35,
+      "h": 35,
+      "radius": 4,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "4:388",
+      "name": "1",
+      "type": "TEXT",
+      "x": 12,
+      "y": 10,
+      "w": 11,
+      "h": 16,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "1",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 4,
+      "id": "70342:2821",
+      "name": "Frame 225",
+      "type": "FRAME",
+      "x": 43,
+      "y": 0,
+      "w": 35,
+      "h": 35,
+      "radius": 4,
+      "layout": "VERTICAL",
+      "pad": [8, 12, 10, 12],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "4:389",
+      "name": "2",
+      "type": "TEXT",
+      "x": 12,
+      "y": 9,
+      "w": 11,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "2",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 4,
+      "id": "70342:2822",
+      "name": "Frame 226",
+      "type": "FRAME",
+      "x": 86,
+      "y": 0,
+      "w": 35,
+      "h": 35,
+      "radius": 4,
+      "layout": "VERTICAL",
+      "pad": [8, 12, 10, 12],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "4:390",
+      "name": "3",
+      "type": "TEXT",
+      "x": 12,
+      "y": 9,
+      "w": 11,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "3",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 4,
+      "id": "70342:2823",
+      "name": "Frame 227",
+      "type": "FRAME",
+      "x": 129,
+      "y": 0,
+      "w": 35,
+      "h": 35,
+      "radius": 4,
+      "layout": "VERTICAL",
+      "pad": [8, 12, 10, 12],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "4:391",
+      "name": "4",
+      "type": "TEXT",
+      "x": 12,
+      "y": 9,
+      "w": 11,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "4",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 400,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 4,
+      "id": "70342:2824",
+      "name": "Frame 228",
+      "type": "FRAME",
+      "x": 172,
+      "y": 0,
+      "w": 35,
+      "h": 35,
+      "radius": 4,
+      "layout": "HORIZONTAL",
+      "pad": [8, 8, 8, 8],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "4:392",
+      "name": "Iconly/Curved/Arrow - Right 2",
+      "type": "INSTANCE",
+      "x": 8,
+      "y": 8,
+      "w": 18,
+      "h": 18
+    },
+    {
+      "depth": 6,
+      "id": "I4:392;29221:4935",
+      "name": "Arrow - Right 2",
+      "type": "GROUP",
+      "x": 6,
+      "y": 4,
+      "w": 5,
+      "h": 11
+    },
+    {
+      "depth": 7,
+      "id": "I4:392;29221:4936",
+      "name": "Stroke 1",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 0,
+      "w": 5,
+      "h": 11
+    },
+    {
+      "depth": 1,
+      "id": "70353:241",
+      "name": "Promos",
+      "type": "FRAME",
+      "x": 120,
+      "y": 2116,
+      "w": 1200,
+      "h": 250,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 28
+    },
+    {
+      "depth": 2,
+      "id": "70353:239",
+      "name": "Promo Card — Genesis Drops",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250,
+      "radius": 8
+    },
+    {
+      "depth": 3,
+      "id": "4:431",
+      "name": "Rectangle 22",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 3,
+      "id": "4:406",
+      "name": "Limited-edition\ngenesis drops",
+      "type": "TEXT",
+      "x": 350,
+      "y": 37,
+      "w": 206,
+      "h": 48,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Lançamentos gênesis\nde edição limitada",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 24,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 3,
+      "id": "4:425",
+      "name": "Colecione edições escassas diretamente dos criadores antes da revelação pública.",
+      "type": "TEXT",
+      "x": 293,
+      "y": 94,
+      "w": 263,
+      "h": 45,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Colecione edições escassas diretamente dos criadores antes da revelação pública.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 24,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 3,
+      "id": "4:428",
+      "name": "NFT Artwork 17",
+      "type": "RECTANGLE",
+      "x": -5,
+      "y": 0,
+      "w": 292,
+      "h": 250,
+      "radius": 18,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 3,
+      "id": "5:112",
+      "name": "Group 16",
+      "type": "GROUP",
+      "x": 416,
+      "y": 164,
+      "w": 140,
+      "h": 40
+    },
+    {
+      "depth": 4,
+      "id": "4:416",
+      "name": "Rectangle 23",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 140,
+      "h": 40,
+      "radius": 6,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "5:107",
+      "name": "Group 14",
+      "type": "GROUP",
+      "x": 26,
+      "y": 10,
+      "w": 86,
+      "h": 20
+    },
+    {
+      "depth": 5,
+      "id": "5:111",
+      "name": "Frame 15",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 86,
+      "h": 20,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 6,
+      "id": "4:417",
+      "name": "Explorar",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 68,
+      "h": 20,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "Explorar",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 500,
+      "lh": 20,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 6,
+      "id": "5:99",
+      "name": "Iconly/Curved/Arrow - Right",
+      "type": "INSTANCE",
+      "x": 68,
+      "y": 2,
+      "w": 18,
+      "h": 18
+    },
+    {
+      "depth": 7,
+      "id": "I5:99;29221:4926",
+      "name": "Arrow - Right",
+      "type": "GROUP",
+      "x": 4,
+      "y": 4,
+      "w": 11,
+      "h": 9
+    },
+    {
+      "depth": 8,
+      "id": "I5:99;29221:4927",
+      "name": "Stroke 1",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 4,
+      "w": 11,
+      "h": 1
+    },
+    {
+      "depth": 8,
+      "id": "I5:99;29221:4928",
+      "name": "Stroke 3",
+      "type": "VECTOR",
+      "x": 7,
+      "y": 0,
+      "w": 5,
+      "h": 9
+    },
+    {
+      "depth": 3,
+      "id": "5:134",
+      "name": "Mask Group",
+      "type": "GROUP",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250
+    },
+    {
+      "depth": 4,
+      "id": "5:135",
+      "name": "Rectangle 22",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250,
+      "fill": {
+        "color": "#FBFBFB",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "5:136",
+      "name": "Ellipse 7",
+      "type": "ELLIPSE",
+      "x": -191,
+      "y": 142,
+      "w": 256,
+      "h": 256
+    },
+    {
+      "depth": 4,
+      "id": "5:137",
+      "name": "Ellipse 8",
+      "type": "ELLIPSE",
+      "x": -199,
+      "y": 134,
+      "w": 256,
+      "h": 256
+    },
+    {
+      "depth": 2,
+      "id": "70353:240",
+      "name": "Promo Card — Curated Art",
+      "type": "FRAME",
+      "x": 614,
+      "y": 0,
+      "w": 586,
+      "h": 250,
+      "radius": 8
+    },
+    {
+      "depth": 3,
+      "id": "4:419",
+      "name": "Rectangle 24",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 3,
+      "id": "4:420",
+      "name": "Curated digital art\n& much more",
+      "type": "TEXT",
+      "x": 291,
+      "y": 37,
+      "w": 260,
+      "h": 48,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Arte digital selecionada\ne muito mais",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 24,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 3,
+      "id": "4:423",
+      "name": "NFT Artwork 16",
+      "type": "RECTANGLE",
+      "x": 2,
+      "y": 0,
+      "w": 287,
+      "h": 250,
+      "radius": 17,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 3,
+      "id": "4:426",
+      "name": "Explore novos artistas, coleções verificadas e obras digitais que definem a cultura.",
+      "type": "TEXT",
+      "x": 295,
+      "y": 94,
+      "w": 252,
+      "h": 45,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Explore novos artistas, coleções verificadas e obras digitais que definem a cultura.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 24,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 3,
+      "id": "5:113",
+      "name": "Group 17",
+      "type": "GROUP",
+      "x": 411,
+      "y": 164,
+      "w": 140,
+      "h": 40
+    },
+    {
+      "depth": 4,
+      "id": "5:114",
+      "name": "Rectangle 23",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 140,
+      "h": 40,
+      "radius": 6,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70304:390",
+      "name": "Group 15",
+      "type": "GROUP",
+      "x": 28,
+      "y": 10,
+      "w": 86,
+      "h": 20
+    },
+    {
+      "depth": 5,
+      "id": "70304:391",
+      "name": "Frame 15",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 86,
+      "h": 20,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 6,
+      "id": "70304:392",
+      "name": "Explorar",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 68,
+      "h": 20,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "Explorar",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 500,
+      "lh": 20,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 6,
+      "id": "70304:393",
+      "name": "Iconly/Curved/Arrow - Right",
+      "type": "INSTANCE",
+      "x": 68,
+      "y": 2,
+      "w": 18,
+      "h": 18
+    },
+    {
+      "depth": 7,
+      "id": "I70304:393;29221:4926",
+      "name": "Arrow - Right",
+      "type": "GROUP",
+      "x": 4,
+      "y": 4,
+      "w": 11,
+      "h": 9
+    },
+    {
+      "depth": 8,
+      "id": "I70304:393;29221:4927",
+      "name": "Stroke 1",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 4,
+      "w": 11,
+      "h": 1
+    },
+    {
+      "depth": 8,
+      "id": "I70304:393;29221:4928",
+      "name": "Stroke 3",
+      "type": "VECTOR",
+      "x": 7,
+      "y": 0,
+      "w": 5,
+      "h": 9
+    },
+    {
+      "depth": 3,
+      "id": "5:130",
+      "name": "Mask Group",
+      "type": "GROUP",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250
+    },
+    {
+      "depth": 4,
+      "id": "5:131",
+      "name": "Rectangle 22",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 586,
+      "h": 250,
+      "fill": {
+        "color": "#FBFBFB",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "5:132",
+      "name": "Ellipse 7",
+      "type": "ELLIPSE",
+      "x": -191,
+      "y": 142,
+      "w": 256,
+      "h": 256
+    },
+    {
+      "depth": 4,
+      "id": "5:133",
+      "name": "Ellipse 8",
+      "type": "ELLIPSE",
+      "x": -199,
+      "y": 134,
+      "w": 256,
+      "h": 256
+    },
+    {
+      "depth": 1,
+      "id": "70343:253",
+      "name": "Blog",
+      "type": "FRAME",
+      "x": 120,
+      "y": 2462,
+      "w": 1200,
+      "h": 476,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 40
+    },
+    {
+      "depth": 2,
+      "id": "70343:254",
+      "name": "Blog Section Header",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 67,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 3,
+      "id": "70343:255",
+      "name": "Diário da Cunhagem",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 37,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Diário da Cunhagem",
+      "font": "Roboto Mono",
+      "size": 28,
+      "weight": 700,
+      "lh": 36.93,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 3,
+      "id": "70343:256",
+      "name": "Histórias, guias e insights para colecionadores sobre o universo da propriedade digital.",
+      "type": "TEXT",
+      "x": 0,
+      "y": 49,
+      "w": 1200,
+      "h": 18,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Histórias, guias e insights para colecionadores sobre o universo da propriedade digital.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 18.46,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 2,
+      "id": "70343:257",
+      "name": "Cards",
+      "type": "FRAME",
+      "x": 0,
+      "y": 107,
+      "w": 1200,
+      "h": 369,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 24
+    },
+    {
+      "depth": 3,
+      "id": "70343:258",
+      "name": "Card 1",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 268,
+      "h": 369,
+      "radius": 8,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 4,
+      "id": "70343:259",
+      "name": "Image",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 268,
+      "h": 195,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70343:260",
+      "name": "Content",
+      "type": "FRAME",
+      "x": 0,
+      "y": 195,
+      "w": 268,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [12, 16, 16, 16],
+      "gap": 8
+    },
+    {
+      "depth": 5,
+      "id": "70343:261",
+      "name": "12 de setembro | Leitura de 6 min",
+      "type": "TEXT",
+      "x": 16,
+      "y": 12,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "12 de setembro  |  Leitura de 6 min",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:262",
+      "name": "Como funciona a propriedade de NFTs",
+      "type": "TEXT",
+      "x": 16,
+      "y": 52,
+      "w": 236,
+      "h": 42,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Como funciona a propriedade de NFTs",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "70343:263",
+      "name": "Aprenda a colecionar, negociar e verificar ativos digitais.",
+      "type": "TEXT",
+      "x": 16,
+      "y": 102,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Aprenda a colecionar, negociar e verificar ativos digitais.",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:264",
+      "name": "CTA",
+      "type": "FRAME",
+      "x": 16,
+      "y": 142,
+      "w": 74,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 4
+    },
+    {
+      "depth": 6,
+      "id": "70343:265",
+      "name": "Ler mais",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 58,
+      "h": 14,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Ler mais",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 700,
+      "lh": 14,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70343:266",
+      "name": "→",
+      "type": "TEXT",
+      "x": 62,
+      "y": 0,
+      "w": 12,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "→",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 400,
+      "lh": 15.83,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 3,
+      "id": "70343:267",
+      "name": "Card 2",
+      "type": "FRAME",
+      "x": 292,
+      "y": 0,
+      "w": 268,
+      "h": 369,
+      "radius": 8,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 4,
+      "id": "70343:268",
+      "name": "Image",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 268,
+      "h": 195,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70343:269",
+      "name": "Content",
+      "type": "FRAME",
+      "x": 0,
+      "y": 195,
+      "w": 268,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [12, 16, 16, 16],
+      "gap": 8
+    },
+    {
+      "depth": 5,
+      "id": "70343:270",
+      "name": "13 de setembro | Leitura de 2 min",
+      "type": "TEXT",
+      "x": 16,
+      "y": 12,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "13 de setembro  |  Leitura de 2 min",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:271",
+      "name": "10 artistas digitais para acompanhar",
+      "type": "TEXT",
+      "x": 16,
+      "y": 52,
+      "w": 236,
+      "h": 42,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "10 artistas digitais para acompanhar",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "70343:272",
+      "name": "Conheça criadores que moldam a cultura digital.",
+      "type": "TEXT",
+      "x": 16,
+      "y": 102,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Conheça criadores que moldam a cultura digital.",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:273",
+      "name": "CTA",
+      "type": "FRAME",
+      "x": 16,
+      "y": 142,
+      "w": 74,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 4
+    },
+    {
+      "depth": 6,
+      "id": "70343:274",
+      "name": "Ler mais",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 58,
+      "h": 14,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Ler mais",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 700,
+      "lh": 14,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70343:275",
+      "name": "→",
+      "type": "TEXT",
+      "x": 62,
+      "y": 0,
+      "w": 12,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "→",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 400,
+      "lh": 15.83,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 3,
+      "id": "70343:276",
+      "name": "Card 3",
+      "type": "FRAME",
+      "x": 584,
+      "y": 0,
+      "w": 268,
+      "h": 369,
+      "radius": 8,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 4,
+      "id": "70343:277",
+      "name": "Image",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 268,
+      "h": 195,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70343:278",
+      "name": "Content",
+      "type": "FRAME",
+      "x": 0,
+      "y": 195,
+      "w": 268,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [12, 16, 16, 16],
+      "gap": 8
+    },
+    {
+      "depth": 5,
+      "id": "70343:279",
+      "name": "15 de setembro | Leitura de 3 min",
+      "type": "TEXT",
+      "x": 16,
+      "y": 12,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "15 de setembro  |  Leitura de 3 min",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:280",
+      "name": "Raridade, atributos e procedência",
+      "type": "TEXT",
+      "x": 16,
+      "y": 52,
+      "w": 236,
+      "h": 42,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Raridade, atributos e procedência",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "70343:281",
+      "name": "Entenda raridade, procedência, direitos autorais e utilidade.",
+      "type": "TEXT",
+      "x": 16,
+      "y": 102,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Entenda raridade, procedência, direitos autorais e utilidade.",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:282",
+      "name": "CTA",
+      "type": "FRAME",
+      "x": 16,
+      "y": 142,
+      "w": 74,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 4
+    },
+    {
+      "depth": 6,
+      "id": "70343:283",
+      "name": "Ler mais",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 58,
+      "h": 14,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Ler mais",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 700,
+      "lh": 14,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70343:284",
+      "name": "→",
+      "type": "TEXT",
+      "x": 62,
+      "y": 0,
+      "w": 12,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "→",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 400,
+      "lh": 15.83,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 3,
+      "id": "70343:285",
+      "name": "Card 4",
+      "type": "FRAME",
+      "x": 876,
+      "y": 0,
+      "w": 268,
+      "h": 369,
+      "radius": 8,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 4,
+      "id": "70343:286",
+      "name": "Image",
+      "type": "RECTANGLE",
+      "x": 0,
+      "y": 0,
+      "w": 268,
+      "h": 195,
+      "fill": {
+        "type": "IMAGE"
+      }
+    },
+    {
+      "depth": 4,
+      "id": "70343:287",
+      "name": "Content",
+      "type": "FRAME",
+      "x": 0,
+      "y": 195,
+      "w": 268,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [12, 16, 16, 16],
+      "gap": 8
+    },
+    {
+      "depth": 5,
+      "id": "70343:288",
+      "name": "15 de setembro | Leitura de 2 min",
+      "type": "TEXT",
+      "x": 16,
+      "y": 12,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "15 de setembro  |  Leitura de 2 min",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:289",
+      "name": "Como proteger sua carteira",
+      "type": "TEXT",
+      "x": 16,
+      "y": 52,
+      "w": 236,
+      "h": 42,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Como proteger sua carteira",
+      "font": "Roboto Mono",
+      "size": 16,
+      "weight": 700,
+      "lh": 21.1,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "70343:290",
+      "name": "Proteja sua carteira, seus ativos e sua identidade.",
+      "type": "TEXT",
+      "x": 16,
+      "y": 102,
+      "w": 236,
+      "h": 32,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Proteja sua carteira, seus ativos e sua identidade.",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 500,
+      "lh": 16,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 5,
+      "id": "70343:291",
+      "name": "CTA",
+      "type": "FRAME",
+      "x": 16,
+      "y": 142,
+      "w": 74,
+      "h": 16,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 4
+    },
+    {
+      "depth": 6,
+      "id": "70343:292",
+      "name": "Ler mais",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 58,
+      "h": 14,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "Ler mais",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 700,
+      "lh": 14,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 6,
+      "id": "70343:293",
+      "name": "→",
+      "type": "TEXT",
+      "x": 62,
+      "y": 0,
+      "w": 12,
+      "h": 16,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "→",
+      "font": "Roboto Mono",
+      "size": 12,
+      "weight": 400,
+      "lh": 15.83,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 1,
+      "id": "70492:696",
+      "name": "Footer",
+      "type": "INSTANCE",
+      "x": 120,
+      "y": 3034,
+      "w": 1200,
+      "h": 610,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 2,
+      "id": "I70492:696;70491:697",
+      "name": "Frame 122",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 250,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [32, 32, 32, 32],
+      "gap": 12
+    },
+    {
+      "depth": 3,
+      "id": "I70492:696;70491:698",
+      "name": "Frame 100",
+      "type": "FRAME",
+      "x": 32,
+      "y": 32,
+      "w": 1154,
+      "h": 202,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 28
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:699",
+      "name": "Frame 22",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 265,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, 16, null, 16],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:794",
+      "name": "Frame 92",
+      "type": "FRAME",
+      "x": 16,
+      "y": 0,
+      "w": 233,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:795",
+      "name": "Frame 91",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 74,
+      "h": 74,
+      "radius": 37,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:796",
+      "name": "Service mark W",
+      "type": "TEXT",
+      "x": 30,
+      "y": 21,
+      "w": 15,
+      "h": 32,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "W",
+      "font": "Roboto Mono",
+      "size": 24,
+      "weight": 700,
+      "lh": 31.65,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:797",
+      "name": "Segurança da carteira",
+      "type": "TEXT",
+      "x": 0,
+      "y": 86,
+      "w": 233,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Segurança da carteira",
+      "font": "Roboto Mono",
+      "size": 17,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:798",
+      "name": "Proteja sua carteira e colecione arte digital verificada com confiança.",
+      "type": "TEXT",
+      "x": 0,
+      "y": 114,
+      "w": 204,
+      "h": 88,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Proteja sua carteira e colecione arte digital verificada com confiança.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 22,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:841",
+      "name": "Rectangle 36",
+      "type": "RECTANGLE",
+      "x": 265,
+      "y": 0,
+      "w": 1,
+      "h": 202,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:842",
+      "name": "Frame 21",
+      "type": "FRAME",
+      "x": 266,
+      "y": 0,
+      "w": 265,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, 16, null, 16],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:843",
+      "name": "Frame 94",
+      "type": "FRAME",
+      "x": 16,
+      "y": 0,
+      "w": 233,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:844",
+      "name": "Frame 93",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 74,
+      "h": 74,
+      "radius": 37,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:845",
+      "name": "Service mark C",
+      "type": "TEXT",
+      "x": 30,
+      "y": 21,
+      "w": 15,
+      "h": 32,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "C",
+      "font": "Roboto Mono",
+      "size": 24,
+      "weight": 700,
+      "lh": 31.65,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:846",
+      "name": "Criadores em destaque",
+      "type": "TEXT",
+      "x": 0,
+      "y": 86,
+      "w": 233,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Criadores em destaque",
+      "font": "Roboto Mono",
+      "size": 17,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:847",
+      "name": "Conheça artistas, estúdios e comunidades que moldam a cultura digital na rede.",
+      "type": "TEXT",
+      "x": 0,
+      "y": 114,
+      "w": 204,
+      "h": 88,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Conheça artistas, estúdios e comunidades que moldam a cultura digital na rede.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 22,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:959",
+      "name": "Rectangle 38",
+      "type": "RECTANGLE",
+      "x": 530,
+      "y": 0,
+      "w": 1,
+      "h": 202,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:960",
+      "name": "Frame 20",
+      "type": "FRAME",
+      "x": 531,
+      "y": 0,
+      "w": 265,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, 16, null, 16],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:961",
+      "name": "Frame 96",
+      "type": "FRAME",
+      "x": 16,
+      "y": 0,
+      "w": 233,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:962",
+      "name": "Frame 95",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 74,
+      "h": 74,
+      "radius": 37,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:963",
+      "name": "Service mark D",
+      "type": "TEXT",
+      "x": 30,
+      "y": 21,
+      "w": 15,
+      "h": 32,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "D",
+      "font": "Roboto Mono",
+      "size": 24,
+      "weight": 700,
+      "lh": 31.65,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:964",
+      "name": "Alertas de lançamentos",
+      "type": "TEXT",
+      "x": 0,
+      "y": 86,
+      "w": 233,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Alertas de lançamentos",
+      "font": "Roboto Mono",
+      "size": 17,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:965",
+      "name": "Receba calendários de cunhagem, novidades de listas de acesso e análises do mercado.",
+      "type": "TEXT",
+      "x": 0,
+      "y": 114,
+      "w": 204,
+      "h": 88,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Receba calendários de cunhagem, novidades de listas de acesso e análises do mercado.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 22,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:1232",
+      "name": "Rectangle 39",
+      "type": "RECTANGLE",
+      "x": 796,
+      "y": 0,
+      "w": 1,
+      "h": 202,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:1233",
+      "name": "Frame 99",
+      "type": "FRAME",
+      "x": 797,
+      "y": 0,
+      "w": 357,
+      "h": 202,
+      "layout": "VERTICAL",
+      "pad": [null, 16, null, 16],
+      "gap": 12
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1234",
+      "name": "Frame 102",
+      "type": "FRAME",
+      "x": 16,
+      "y": 0,
+      "w": 325,
+      "h": 88,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 16
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1235",
+      "name": "Antecipe-se ao próximo lançamento",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 325,
+      "h": 32,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Antecipe-se ao próximo lançamento",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1236",
+      "name": "Frame 101",
+      "type": "FRAME",
+      "x": 0,
+      "y": 48,
+      "w": 325,
+      "h": 40,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1237",
+      "name": "Frame 98",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 325,
+      "h": 40,
+      "radius": 6,
+      "fill": {
+        "color": "#38220F",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [12, null, 12, 12],
+      "gap": 10
+    },
+    {
+      "depth": 8,
+      "id": "I70492:696;70491:1238",
+      "name": "digite seu e-mail...",
+      "type": "TEXT",
+      "x": 12,
+      "y": 12,
+      "w": 169,
+      "h": 16,
+      "fill": {
+        "color": "#B39463",
+        "opacity": 1
+      },
+      "text": "digite seu e-mail...",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 16,
+      "color": "#B39463"
+    },
+    {
+      "depth": 8,
+      "id": "I70492:696;70491:1239",
+      "name": "Frame 97",
+      "type": "FRAME",
+      "x": 240,
+      "y": 0,
+      "w": 85,
+      "h": 40,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [12, 4, 12, 16],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1240",
+      "name": "Enviar",
+      "type": "TEXT",
+      "x": 16,
+      "y": 12,
+      "w": 65,
+      "h": 16,
+      "fill": {
+        "color": "#140D0A",
+        "opacity": 1
+      },
+      "text": "Enviar",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#140D0A"
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1241",
+      "name": "Get curated drops, creator stories, and collector rewards delivered to your inbo",
+      "type": "TEXT",
+      "x": 16,
+      "y": 100,
+      "w": 325,
+      "h": 89,
+      "fill": {
+        "color": "#CFB28C",
+        "opacity": 1
+      },
+      "text": "Receba lançamentos selecionados, histórias de criadores e novidades do mercado.",
+      "font": "Roboto Mono",
+      "size": 13,
+      "weight": 400,
+      "lh": 22,
+      "color": "#CFB28C"
+    },
+    {
+      "depth": 2,
+      "id": "I70492:696;70491:1242",
+      "name": "Frame 121",
+      "type": "FRAME",
+      "x": 0,
+      "y": 250,
+      "w": 1200,
+      "h": 360,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null]
+    },
+    {
+      "depth": 3,
+      "id": "I70492:696;70491:1243",
+      "name": "Frame 120",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 88,
+      "fill": {
+        "color": "#38220F",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [32, 32, 32, 32],
+      "gap": 10
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:1244",
+      "name": "Frame 119",
+      "type": "FRAME",
+      "x": 32,
+      "y": 32,
+      "w": 1136,
+      "h": 24,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 92
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1245",
+      "name": "Logo",
+      "type": "FRAME",
+      "x": 0,
+      "y": -5,
+      "w": 211,
+      "h": 34,
+      "layout": "HORIZONTAL",
+      "pad": [8, null, 8, null],
+      "gap": 10
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1246",
+      "name": "KURIO Wordmark",
+      "type": "TEXT",
+      "x": 0,
+      "y": 8,
+      "w": 48,
+      "h": 18,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "KURIO",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 700,
+      "lh": 18.46,
+      "ls": 1.4000000000000001,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1247",
+      "name": "Frame 126",
+      "type": "FRAME",
+      "x": 303,
+      "y": 0,
+      "w": 211,
+      "h": 24,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1248",
+      "name": "Built for collectors,\r\ncreators, and culture",
+      "type": "TEXT",
+      "x": 0,
+      "y": -10,
+      "w": 219,
+      "h": 44,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Feito para colecionadores,\ncriadores e cultura",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 22,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1249",
+      "name": "Frame 124",
+      "type": "FRAME",
+      "x": 605,
+      "y": 1,
+      "w": 211,
+      "h": 22,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1250",
+      "name": "contato@email.com",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 143,
+      "h": 22,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "contato@email.com",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 22,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1251",
+      "name": "Frame 125",
+      "type": "FRAME",
+      "x": 908,
+      "y": 1,
+      "w": 228,
+      "h": 22,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1252",
+      "name": "+55 11 4002 8922",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 135,
+      "h": 22,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "+55 11 4002 8922",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 22,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 3,
+      "id": "I70492:696;70491:1253",
+      "name": "Frame 118",
+      "type": "FRAME",
+      "x": 0,
+      "y": 88,
+      "w": 1200,
+      "h": 272,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 6
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:1254",
+      "name": "Frame 117",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 236,
+      "fill": {
+        "color": "#241612",
+        "opacity": 1
+      },
+      "layout": "VERTICAL",
+      "pad": [32, 32, 32, 32],
+      "gap": 10
+    },
+    {
+      "depth": 5,
+      "id": "I70492:696;70491:1255",
+      "name": "Frame 116",
+      "type": "FRAME",
+      "x": 32,
+      "y": 32,
+      "w": 1136,
+      "h": 174,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 124
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1256",
+      "name": "Frame 103",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 179,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 8
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1257",
+      "name": "Meu perfil",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 179,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Meu perfil",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1258",
+      "name": "My Profile\nMy Collection\r\nActivity\r\nCreator Studio\r\nWatchlist",
+      "type": "TEXT",
+      "x": 0,
+      "y": 24,
+      "w": 179,
+      "h": 150,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Meu perfil\nMinha coleção\nAtividade\nEstúdio do criador\nLista de interesse",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 30,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1259",
+      "name": "Frame 104",
+      "type": "FRAME",
+      "x": 303,
+      "y": 0,
+      "w": 179,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 8
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1260",
+      "name": "Central de ajuda",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 179,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Central de ajuda",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1261",
+      "name": "Help Center\r\nHow to Buy NFTs\r\nWallet & Security\r\nMarketplace Policy\r\nReport an I",
+      "type": "TEXT",
+      "x": 0,
+      "y": 24,
+      "w": 179,
+      "h": 150,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Central de ajuda\nComo comprar NFTs\nCarteira e segurança\nPolítica do mercado\nDenunciar item",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 30,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1262",
+      "name": "Frame 105",
+      "type": "FRAME",
+      "x": 605,
+      "y": 0,
+      "w": 179,
+      "h": 174,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 8
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1263",
+      "name": "Coleções",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 179,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Coleções",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1264",
+      "name": "Digital Art\r\nPhotography\r\nMusic\r\n3D Art\r\nUtility",
+      "type": "TEXT",
+      "x": 0,
+      "y": 24,
+      "w": 179,
+      "h": 150,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Arte digital\nFotografia\nMúsica\nArte 3D\nUtilidade",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 30,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 6,
+      "id": "I70492:696;70491:1265",
+      "name": "Frame 115",
+      "type": "FRAME",
+      "x": 908,
+      "y": 0,
+      "w": 228,
+      "h": 152,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 32
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1266",
+      "name": "Frame 114",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 190,
+      "h": 66,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 20
+    },
+    {
+      "depth": 8,
+      "id": "I70492:696;70491:1267",
+      "name": "Redes sociais",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 190,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Redes sociais",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "I70492:696;70491:1268",
+      "name": "Frame 113",
+      "type": "FRAME",
+      "x": 0,
+      "y": 36,
+      "w": 190,
+      "h": 30,
+      "layout": "HORIZONTAL",
+      "pad": [null, null, null, null],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1269",
+      "name": "Frame 108",
+      "type": "FRAME",
+      "x": 0,
+      "y": 0,
+      "w": 30,
+      "h": 30,
+      "radius": 4,
+      "layout": "HORIZONTAL",
+      "pad": [8, 12, 8, 12],
+      "gap": 10
+    },
+    {
+      "depth": 10,
+      "id": "I70492:696;70491:1270",
+      "name": "Facebook",
+      "type": "VECTOR",
+      "x": 12,
+      "y": 8,
+      "w": 8,
+      "h": 16,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1271",
+      "name": "Frame 109",
+      "type": "FRAME",
+      "x": 40,
+      "y": 0,
+      "w": 30,
+      "h": 30,
+      "radius": 4,
+      "layout": "HORIZONTAL",
+      "pad": [8, 8, 8, 8],
+      "gap": 10
+    },
+    {
+      "depth": 10,
+      "id": "I70492:696;70491:1272",
+      "name": "Instagram",
+      "type": "VECTOR",
+      "x": 8,
+      "y": 8,
+      "w": 16,
+      "h": 16,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1273",
+      "name": "Frame 110",
+      "type": "FRAME",
+      "x": 80,
+      "y": 0,
+      "w": 30,
+      "h": 30,
+      "radius": 4,
+      "layout": "VERTICAL",
+      "pad": [8, 8, 8, 8],
+      "gap": 10
+    },
+    {
+      "depth": 10,
+      "id": "I70492:696;70491:1274",
+      "name": "Twitter",
+      "type": "VECTOR",
+      "x": 8,
+      "y": 8,
+      "w": 16,
+      "h": 13,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1275",
+      "name": "Frame 111",
+      "type": "FRAME",
+      "x": 120,
+      "y": 0,
+      "w": 30,
+      "h": 30,
+      "radius": 4,
+      "layout": "VERTICAL",
+      "pad": [8, 8, 8, 8],
+      "gap": 10
+    },
+    {
+      "depth": 10,
+      "id": "I70492:696;70491:1276",
+      "name": "Linkedin",
+      "type": "VECTOR",
+      "x": 8,
+      "y": 8,
+      "w": 16,
+      "h": 15,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1277",
+      "name": "Frame 112",
+      "type": "FRAME",
+      "x": 160,
+      "y": 0,
+      "w": 30,
+      "h": 30,
+      "radius": 4,
+      "layout": "VERTICAL",
+      "pad": [8, 4, 8, 6],
+      "gap": 10
+    },
+    {
+      "depth": 10,
+      "id": "I70492:696;70491:1278",
+      "name": "Union",
+      "type": "BOOLEAN_OPERATION",
+      "x": 6,
+      "y": 8,
+      "w": 19,
+      "h": 14,
+      "fill": {
+        "color": "#D28A4C",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 11,
+      "id": "I70492:696;70491:1279",
+      "name": "Vector",
+      "type": "VECTOR",
+      "x": 0,
+      "y": 0,
+      "w": 19,
+      "h": 14
+    },
+    {
+      "depth": 11,
+      "id": "I70492:696;70491:1280",
+      "name": "Vector",
+      "type": "VECTOR",
+      "x": 7,
+      "y": 4,
+      "w": 6,
+      "h": 6,
+      "radius": 2.1180124282836914,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      }
+    },
+    {
+      "depth": 7,
+      "id": "I70492:696;70491:1281",
+      "name": "Frame 107",
+      "type": "FRAME",
+      "x": 0,
+      "y": 98,
+      "w": 228,
+      "h": 54,
+      "layout": "VERTICAL",
+      "pad": [null, null, null, null],
+      "gap": 12
+    },
+    {
+      "depth": 8,
+      "id": "I70492:696;70491:1282",
+      "name": "Carteiras compatíveis",
+      "type": "TEXT",
+      "x": 0,
+      "y": 0,
+      "w": 228,
+      "h": 16,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "Carteiras compatíveis",
+      "font": "Roboto Mono",
+      "size": 18,
+      "weight": 700,
+      "lh": 16,
+      "color": "#F5F1EB"
+    },
+    {
+      "depth": 8,
+      "id": "I70492:696;70491:1283",
+      "name": "Frame 106",
+      "type": "FRAME",
+      "x": 0,
+      "y": 28,
+      "w": 228,
+      "h": 26,
+      "radius": 6,
+      "fill": {
+        "color": "#38220F",
+        "opacity": 1
+      },
+      "layout": "HORIZONTAL",
+      "pad": [8, null, 8, 8],
+      "gap": 10
+    },
+    {
+      "depth": 9,
+      "id": "I70492:696;70491:1284",
+      "name": "Supported wallet brands",
+      "type": "TEXT",
+      "x": 11,
+      "y": 7,
+      "w": 215,
+      "h": 12,
+      "fill": {
+        "color": "#E89B55",
+        "opacity": 1
+      },
+      "text": "METAMASK  •  WALLETCONNECT  •  COINBASE",
+      "font": "Roboto Mono",
+      "size": 9,
+      "weight": 700,
+      "lh": 11.87,
+      "ls": 0.10000000149011612,
+      "color": "#E89B55"
+    },
+    {
+      "depth": 4,
+      "id": "I70492:696;70491:1285",
+      "name": "© 2026 Kurio. Propriedade digital para todos.",
+      "type": "TEXT",
+      "x": 0,
+      "y": 242,
+      "w": 1200,
+      "h": 30,
+      "fill": {
+        "color": "#F5F1EB",
+        "opacity": 1
+      },
+      "text": "© 2026 Kurio. Propriedade digital para todos.",
+      "font": "Roboto Mono",
+      "size": 14,
+      "weight": 400,
+      "lh": 30,
+      "color": "#F5F1EB"
+    }
+  ]
+}
