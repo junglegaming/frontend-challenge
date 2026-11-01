@@ -57,7 +57,7 @@ medidos na mesma sessão.
 - Testes:
   - `typecheck`, `lint`, `prettier`: ok.
   - `test:unit`: 49/49.
-  - `test:e2e`: 100/103 (3 skips intencionais de layout mobile); baselines
+  - `test:e2e`: 103/106 (3 skips intencionais de layout mobile); baselines
     visuais atualizadas e verdes.
   - A recodificação somou só +758 px (0,08% da tela) ao diff do Detalhe.
 - Migração verificada: um banco com 50 URLs `.png` (incluindo carrinho e
@@ -108,7 +108,7 @@ evento de tempo real, sem erros, e nenhum log `[MSW]` no console.
   - tempo de JS e do main thread inalterado (~1,35 s / ~2,3 s);
   - o ganho de CPU é **pequeno e dentro do ruído**: a execução é dominada por
     react-dom, MSW e render, não pelo código das rotas.
-- Testes: `typecheck`, `lint`, `test:unit` 49/49; `test:e2e` 100/103 (3 skips
+- Testes: `typecheck`, `lint`, `test:unit` 49/49; `test:e2e` 103/106 (3 skips
   intencionais de layout mobile).
 
 ## 6. Próximas fases (não implementadas)

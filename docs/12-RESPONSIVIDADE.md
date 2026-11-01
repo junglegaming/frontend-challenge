@@ -71,7 +71,7 @@ Auditoria local com Playwright/Chromium (DPR 1, `reducedMotion`), logado com
 
 - `typecheck`, `lint`, `prettier`: ok.
 - `test:unit`: 49/49.
-- `test:e2e`: 100/103 (3 skips intencionais de layout mobile); os baselines
+- `test:e2e`: 103/106 (3 skips intencionais de layout mobile); os baselines
   visuais foram atualizados e estão verdes.
 - Fluxo de filtros verificado em 768, 900 e 1023 (abre o modal, aplica e fecha)
   e em 1024 (sidebar visível, botão oculto).
