@@ -4,6 +4,7 @@ import type { Network, NftFacets } from '@/shared/contracts'
 import { cn } from '@/shared/lib/cn'
 
 import { FacetListPlaceholder } from './FacetListPlaceholder'
+import { SearchInput } from './SearchInput'
 
 const focusRing =
   'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary'
@@ -36,6 +37,10 @@ export interface FilterSidebarProps {
   value: FilterValues
   /** Aplica um subconjunto de filtros; a página deve voltar para 1. */
   onChange: (patch: Partial<FilterValues>) => void
+  /** Texto atual da busca do catálogo. */
+  searchQuery: string
+  /** Atualiza a busca do catálogo. */
+  onSearchChange: (value: string) => void
   /** Oculta o banner promocional inferior (útil no modal de filtros mobile). */
   hideBanner?: boolean
   /** Prefixo opcional para os inputs de rádio para evitar conflito de grupo no DOM. */
@@ -55,6 +60,8 @@ export function FilterSidebar({
   facets,
   value,
   onChange,
+  searchQuery,
+  onSearchChange,
   hideBanner = false,
   namePrefix,
 }: FilterSidebarProps) {
@@ -199,13 +206,37 @@ export function FilterSidebar({
     })
   }
 
+  const hasFilters = Boolean(value.collection || value.network || value.priceMin || value.priceMax)
+
+  function clearFilters() {
+    onChange({
+      collection: undefined,
+      network: undefined,
+      priceMin: undefined,
+      priceMax: undefined,
+    })
+  }
+
   return (
     <aside
       aria-label="Filtros do catálogo"
       className="flex w-full flex-col gap-6 lg:w-[310px] lg:shrink-0"
     >
       {/* Filters: 310px x 785px, padding 20px, bg: #241612 */}
-      <div className="flex w-full flex-col bg-[#241612] p-5 lg:h-[785px] lg:w-[310px]">
+      <div className="flex w-full flex-col bg-[#241612] p-5 lg:min-h-[785px] lg:w-[310px]">
+        <div className="mb-6 flex w-full flex-col gap-3 lg:w-[270px]">
+          <SearchInput value={searchQuery} onChange={onSearchChange} />
+          {hasFilters && (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="cursor-pointer self-start font-mono text-[13px] leading-4 font-medium text-highlight underline transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Limpar filtros
+            </button>
+          )}
+        </div>
+
         {/* Frame 140: 270px x 745px, gap: 40px */}
         <div className="flex w-full flex-col gap-10 lg:w-[270px]">
           {/* Collections Filter: 270px x 388px, gap: 12px */}

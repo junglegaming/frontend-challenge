@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
 import { Link, createFileRoute } from '@tanstack/react-router'
@@ -15,6 +15,8 @@ import { ApiError } from '@/shared/api/http-client'
 import { DEFAULT_NFT_LIST_QUERY, registerRequestSchema } from '@/shared/contracts'
 import { cn } from '@/shared/lib/cn'
 import { formatEth } from '@/shared/lib/money'
+import { useFocusTrap } from '@/shared/lib/useFocusTrap'
+import { useMediaQuery } from '@/shared/lib/useMediaQuery'
 
 export const Route = createFileRoute('/cadastro')({
   component: RegisterPage,
@@ -51,6 +53,9 @@ function RegisterPage() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [mobileShowPassword, setMobileShowPassword] = useState(false)
   const [mobileShowConfirmPassword, setMobileShowConfirmPassword] = useState(false)
+  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const dialogRef = useRef<HTMLDivElement>(null)
+  useFocusTrap(dialogRef, isDesktop)
 
   // Desktop Form
   const desktopForm = useForm<SignUpFormValues>({
@@ -201,6 +206,7 @@ function RegisterPage() {
           className="absolute inset-0 z-20 flex items-start justify-center overflow-y-auto px-4 py-8 sm:py-16"
         >
           <div
+            ref={dialogRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="register-modal-title"

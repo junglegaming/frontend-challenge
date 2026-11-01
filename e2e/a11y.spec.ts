@@ -41,6 +41,31 @@ test.describe('acessibilidade e teclado', () => {
     await expect(page.getByRole('tabpanel')).toContainText(/Baseado em \d+ avaliações/)
   })
 
+  test('login desktop prende o foco no diálogo', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'o modal de login só existe no desktop')
+
+    await page.goto('/login')
+    const dialog = page.getByRole('dialog', { name: 'Entrar' })
+    await expect(dialog).toBeVisible()
+    await expect(dialog.getByRole('button', { name: 'Fechar' })).toBeFocused()
+
+    await page.keyboard.press('Shift+Tab')
+    expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true)
+  })
+
+  test('filtros mobile prendem o foco no diálogo', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 })
+    await page.goto('/')
+    await page.getByLabel('Abrir filtros').click()
+
+    const dialog = page.getByRole('dialog', { name: 'Filtros de coleções e redes' })
+    await expect(dialog).toBeVisible()
+    await expect(dialog.getByRole('button', { name: 'Fechar filtros' })).toBeFocused()
+
+    await page.keyboard.press('Shift+Tab')
+    expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true)
+  })
+
   for (const path of ['/', '/nft/nft-1', '/carrinho', '/login']) {
     test(`axe: sem violações críticas em ${path}`, async ({ page }) => {
       await page.goto(path)

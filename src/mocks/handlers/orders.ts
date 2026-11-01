@@ -1,9 +1,10 @@
-import { HttpResponse, delay, http } from 'msw'
+import { http } from 'msw/core/http'
 
 import { type CreateOrderRequest, type Order, createOrderRequestSchema } from '@/shared/contracts'
 import { compare } from '@/shared/lib/money'
 
 import { getDb, persist } from '../db'
+import { json, sleep } from '../http'
 import { QuoteError, computeTotals } from '../pricing'
 import { emitNftUpdated, emitOrderUpdated } from '../realtime'
 import { ORDER_TIMEOUT_DELAY_MS, isOrderTimeout, isPaymentDeclined } from '../scenarios'
@@ -128,7 +129,7 @@ export const orderHandlers = [
           409,
         )
       }
-      return HttpResponse.json(existingOrder)
+      return json(existingOrder)
     }
 
     const wallet = (db.wallets[user.id] ?? []).find((w) => w.id === body.walletId)
@@ -213,9 +214,9 @@ export const orderHandlers = [
     ensurePaymentResolution(order.id)
 
     // O pedido já existe; a resposta é que se perde (cliente recupera por idempotência).
-    if (isOrderTimeout()) await delay(ORDER_TIMEOUT_DELAY_MS)
+    if (isOrderTimeout()) await sleep(ORDER_TIMEOUT_DELAY_MS)
 
-    return HttpResponse.json(order, { status: 201 })
+    return json(order, { status: 201 })
   }),
 
   http.get('/api/orders/:id', ({ request, params }) => {
@@ -228,6 +229,6 @@ export const orderHandlers = [
       return errorResponse('NOT_FOUND', 'Pedido não encontrado', 404)
     }
     ensurePaymentResolution(orderId)
-    return HttpResponse.json(getDb().orders[orderId])
+    return json(getDb().orders[orderId])
   }),
 ]

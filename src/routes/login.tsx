@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
 import { Link, createFileRoute } from '@tanstack/react-router'
@@ -15,6 +15,8 @@ import { DEFAULT_NFT_LIST_QUERY, type LoginRequest, loginRequestSchema } from '@
 import { cn } from '@/shared/lib/cn'
 import { formatEth } from '@/shared/lib/money'
 import { toSafeRedirect } from '@/shared/lib/redirect'
+import { useFocusTrap } from '@/shared/lib/useFocusTrap'
+import { useMediaQuery } from '@/shared/lib/useMediaQuery'
 
 export const Route = createFileRoute('/login')({
   validateSearch: (search: Record<string, unknown>): { redirect?: string } => {
@@ -35,6 +37,9 @@ function LoginPage() {
   const login = useLogin()
   const [showPassword, setShowPassword] = useState(false)
   const [mobileShowPassword, setMobileShowPassword] = useState(false)
+  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const dialogRef = useRef<HTMLDivElement>(null)
+  useFocusTrap(dialogRef, isDesktop)
 
   // Desktop Form
   const desktopForm = useForm<LoginRequest>({
@@ -174,6 +179,7 @@ function LoginPage() {
           className="absolute inset-0 z-20 flex items-start justify-center overflow-y-auto px-4 py-8 sm:py-16"
         >
           <div
+            ref={dialogRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="login-modal-title"

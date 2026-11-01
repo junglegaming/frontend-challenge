@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 import { useQueryClient } from '@tanstack/react-query'
 
-import { io } from 'socket.io-client'
+import type { Socket } from 'socket.io-client'
 import { toast } from 'sonner'
 
 import { queryKeys } from '@/shared/api/query-keys'
@@ -37,54 +37,66 @@ export function useRealtimeSync(sessionScope: string): void {
   useEffect(() => {
     const ownerKey = getOwnerKey()
     const gate = createEventGate()
-    const socket = io(REALTIME_URL, { transports: ['websocket'] })
+    let socket: Socket | null = null
+    let disposed = false
 
-    socket.on('nft.updated', (raw: unknown) => {
-      const parsed = nftUpdatedEventSchema.safeParse(raw)
-      if (!parsed.success) return
-      const event = parsed.data
-      if (!gate.accept(`nft:${event.nftId}`, event.version, event.eventId)) return
+    async function connect() {
+      // O cliente Socket.IO só participa do tempo real; carregá-lo depois da
+      // montagem tira esse chunk do caminho crítico do primeiro paint.
+      const { io } = await import('socket.io-client')
+      if (disposed) return
+      socket = io(REALTIME_URL, { transports: ['websocket'] })
 
-      const cart = queryClient.getQueryData<Cart>(queryKeys.cart.all(ownerKey))
-      const cartItem = cart?.items.find((item) => item.nftId === event.nftId)
+      socket.on('nft.updated', (raw: unknown) => {
+        const parsed = nftUpdatedEventSchema.safeParse(raw)
+        if (!parsed.success) return
+        const event = parsed.data
+        if (!gate.accept(`nft:${event.nftId}`, event.version, event.eventId)) return
 
-      void queryClient.invalidateQueries({ queryKey: queryKeys.nfts.all })
-      void queryClient.invalidateQueries({ queryKey: queryKeys.cart.all(ownerKey) })
-      void queryClient.invalidateQueries({ queryKey: queryKeys.quote.all })
+        const cart = queryClient.getQueryData<Cart>(queryKeys.cart.all(ownerKey))
+        const cartItem = cart?.items.find((item) => item.nftId === event.nftId)
 
-      if (cartItem) {
-        const message =
-          cartItem.priceEth === event.priceEth
-            ? `A disponibilidade de ${cartItem.name} mudou. Confira seu carrinho.`
-            : `O preço de ${cartItem.name} mudou para ${formatEth(event.priceEth)} ETH. Confira seu carrinho.`
-        toast.info(message)
-      }
-    })
-
-    socket.on('order.updated', (raw: unknown) => {
-      const parsed = orderUpdatedEventSchema.safeParse(raw)
-      if (!parsed.success) return
-      const event = parsed.data
-      const orderKey = queryKeys.orders.detail(ownerKey, event.orderId)
-      // Pedido que esta sessão não conhece não é dela: ignora sem consumir a versão.
-      if (queryClient.getQueryData(orderKey) === undefined) return
-      if (!gate.accept(`order:${event.orderId}`, event.version, event.eventId)) return
-      void queryClient.invalidateQueries({ queryKey: orderKey })
-      // Confirmado: o servidor tirou do carrinho só o que foi comprado.
-      if (event.status === 'confirmed') {
+        void queryClient.invalidateQueries({ queryKey: queryKeys.nfts.all })
         void queryClient.invalidateQueries({ queryKey: queryKeys.cart.all(ownerKey) })
-      }
-    })
+        void queryClient.invalidateQueries({ queryKey: queryKeys.quote.all })
 
-    // Eventos perdidos durante a queda: a REST reconstrói o estado atual.
-    socket.io.on('reconnect', () => {
-      void queryClient.invalidateQueries({ type: 'active' })
-    })
+        if (cartItem) {
+          const message =
+            cartItem.priceEth === event.priceEth
+              ? `A disponibilidade de ${cartItem.name} mudou. Confira seu carrinho.`
+              : `O preço de ${cartItem.name} mudou para ${formatEth(event.priceEth)} ETH. Confira seu carrinho.`
+          toast.info(message)
+        }
+      })
+
+      socket.on('order.updated', (raw: unknown) => {
+        const parsed = orderUpdatedEventSchema.safeParse(raw)
+        if (!parsed.success) return
+        const event = parsed.data
+        const orderKey = queryKeys.orders.detail(ownerKey, event.orderId)
+        // Pedido que esta sessão não conhece não é dela: ignora sem consumir a versão.
+        if (queryClient.getQueryData(orderKey) === undefined) return
+        if (!gate.accept(`order:${event.orderId}`, event.version, event.eventId)) return
+        void queryClient.invalidateQueries({ queryKey: orderKey })
+        // Confirmado: o servidor tirou do carrinho só o que foi comprado.
+        if (event.status === 'confirmed') {
+          void queryClient.invalidateQueries({ queryKey: queryKeys.cart.all(ownerKey) })
+        }
+      })
+
+      // Eventos perdidos durante a queda: a REST reconstrói o estado atual.
+      socket.io.on('reconnect', () => {
+        void queryClient.invalidateQueries({ type: 'active' })
+      })
+    }
+
+    void connect()
 
     return () => {
-      socket.io.off('reconnect')
-      socket.removeAllListeners()
-      socket.close()
+      disposed = true
+      socket?.io.off('reconnect')
+      socket?.removeAllListeners()
+      socket?.close()
     }
   }, [queryClient, sessionScope])
 }

@@ -1,5 +1,5 @@
 import { toSocketIo } from '@mswjs/socket.io-binding'
-import { ws } from 'msw'
+import { ws } from 'msw/core/ws'
 
 import type { NftUpdatedEvent, OrderStatus, OrderUpdatedEvent } from '@/shared/contracts'
 import { REALTIME_URL } from '@/shared/realtime/url'

@@ -1,4 +1,4 @@
-import { HttpResponse, http } from 'msw'
+import { http } from 'msw/core/http'
 
 import type {
   AddCartItemRequest,
@@ -10,6 +10,7 @@ import type {
 } from '@/shared/contracts'
 
 import { getDb, persist } from '../db'
+import { json } from '../http'
 import { QuoteError, computeTotals } from '../pricing'
 import { simulateNetwork } from '../scenarios'
 import { errorResponse, getOwnerKey } from '../utils'
@@ -52,7 +53,7 @@ export const cartHandlers = [
   http.get('/api/cart', async ({ request }) => {
     const failure = await simulateNetwork()
     if (failure) return failure
-    return HttpResponse.json(withCurrentCatalog(getCart(getOwnerKey(request))))
+    return json(withCurrentCatalog(getCart(getOwnerKey(request))))
   }),
 
   http.post('/api/cart/items', async ({ request }) => {
@@ -100,7 +101,7 @@ export const cartHandlers = [
     cart.version += 1
     db.carts[ownerKey] = cart
     persist()
-    return HttpResponse.json(cart)
+    return json(cart)
   }),
 
   http.patch('/api/cart/items/:itemId', async ({ request, params }) => {
@@ -123,7 +124,7 @@ export const cartHandlers = [
     cart.version += 1
     db.carts[ownerKey] = cart
     persist()
-    return HttpResponse.json(cart)
+    return json(cart)
   }),
 
   http.delete('/api/cart/items/:itemId', ({ request, params }) => {
@@ -134,7 +135,7 @@ export const cartHandlers = [
     cart.version += 1
     db.carts[ownerKey] = cart
     persist()
-    return HttpResponse.json(cart)
+    return json(cart)
   }),
 
   http.post('/api/quote', async ({ request }) => {
@@ -165,6 +166,6 @@ export const cartHandlers = [
     }
 
     const quote: Quote = { ...totals, version: getCart(getOwnerKey(request)).version }
-    return HttpResponse.json(quote)
+    return json(quote)
   }),
 ]

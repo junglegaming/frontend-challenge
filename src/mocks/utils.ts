@@ -1,6 +1,5 @@
-import { HttpResponse } from 'msw'
-
 import { getDb } from './db'
+import { json } from './http'
 
 export function getToken(request: Request): string | null {
   const auth = request.headers.get('Authorization')
@@ -22,7 +21,7 @@ export function errorResponse(
     error: { code: string; message: string; fields?: Record<string, string>; retryable?: boolean }
   } = { error: { code, message } }
   if (fields) body.error.fields = fields
-  return HttpResponse.json(body, { status })
+  return json(body, { status })
 }
 
 export function unauthorized() {

@@ -1,8 +1,9 @@
-import { HttpResponse, http } from 'msw'
+import { http } from 'msw/core/http'
 
 import type { LoginRequest, RegisterRequest, Session } from '@/shared/contracts'
 
 import { type UserRecord, getDb, hashPassword, persist } from '../db'
+import { json } from '../http'
 import { errorResponse, getAuthenticatedUser, getToken, getVisitorId } from '../utils'
 
 export const SESSION_TTL_MS = 60 * 60 * 1000 // 1h (cenários podem encurtar)
@@ -68,7 +69,7 @@ export const authHandlers = [
     db.users.push(user)
     persist()
     mergeVisitorCart(request, user.id)
-    return HttpResponse.json(buildSession(user), { status: 201 })
+    return json(buildSession(user), { status: 201 })
   }),
 
   http.post('/api/auth/login', async ({ request }) => {
@@ -84,7 +85,7 @@ export const authHandlers = [
     }
     const session = buildSession(user)
     mergeVisitorCart(request, user.id)
-    return HttpResponse.json(session)
+    return json(session)
   }),
 
   http.get('/api/auth/session', ({ request }) => {
@@ -92,7 +93,7 @@ export const authHandlers = [
     if (!user) return errorResponse('SESSION_INVALID', 'Sessão inválida ou expirada', 401)
     const token = getToken(request)!
     const session = getDb().sessions[token]!
-    return HttpResponse.json({
+    return json({
       token,
       user: { id: user.id, name: user.name, email: user.email, avatarUrl: user.avatarUrl },
       expiresAt: session.expiresAt,
@@ -105,6 +106,6 @@ export const authHandlers = [
       delete getDb().sessions[token]
       persist()
     }
-    return new HttpResponse(null, { status: 204 })
+    return new Response(null, { status: 204 })
   }),
 ]

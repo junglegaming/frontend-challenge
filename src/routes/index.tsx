@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, stripSearchParams } from '@tanstack/react-router'
 
 import { Search, SlidersHorizontal, X } from 'lucide-react'
 
@@ -12,7 +12,6 @@ import { Hero } from '@/features/catalog/components/Hero'
 import { NftGrid } from '@/features/catalog/components/NftGrid'
 import { Pagination } from '@/features/catalog/components/Pagination'
 import { Promos } from '@/features/catalog/components/Promos'
-import { SearchInput } from '@/features/catalog/components/SearchInput'
 import { SortSelect } from '@/features/catalog/components/SortSelect'
 import { favoritesQueryOptions } from '@/features/favorites/api'
 import { useFavoriteToggle } from '@/features/favorites/use-favorite-toggle'
@@ -20,9 +19,18 @@ import { CatalogSkeleton } from '@/shared/components/skeletons/CatalogSkeleton'
 import { DEFAULT_NFT_LIST_QUERY, type NftListQuery, nftListQuerySchema } from '@/shared/contracts'
 import { cn } from '@/shared/lib/cn'
 import { useBodyScrollLock } from '@/shared/lib/useBodyScrollLock'
+import { useFocusTrap } from '@/shared/lib/useFocusTrap'
 
 export const Route = createFileRoute('/')({
-  validateSearch: (search) => nftListQuerySchema.parse(search),
+  // URL inválida não deve derrubar a tela: aplica os padrões do catálogo.
+  validateSearch: (search: Record<string, unknown>): NftListQuery => {
+    const parsed = nftListQuerySchema.safeParse(search)
+    return parsed.success ? parsed.data : DEFAULT_NFT_LIST_QUERY
+  },
+  search: {
+    // Mantém a URL limpa: / em vez de /?page=1&pageSize=9.
+    middlewares: [stripSearchParams({ page: 1, pageSize: 9 })],
+  },
   component: HomePage,
 })
 
@@ -30,7 +38,9 @@ function HomePage() {
   const search = Route.useSearch()
   const navigate = Route.useNavigate()
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false)
+  const filtersDialogRef = useRef<HTMLDivElement>(null)
   useBodyScrollLock(isMobileFiltersOpen)
+  useFocusTrap(filtersDialogRef, isMobileFiltersOpen)
 
   useEffect(() => {
     if (!isMobileFiltersOpen) return
@@ -62,7 +72,7 @@ function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-4 px-6 pt-10 pb-8 sm:px-6 md:gap-[96px] md:px-6 md:pt-0 md:pb-0 xl:px-0">
       {/* Mobile Search Bar: 366px x 45px (Figma Mobile / Início) */}
-      <div className="mx-auto flex w-full max-w-[366px] items-center gap-2 md:hidden">
+      <div className="mx-auto flex w-full max-w-[366px] items-center gap-2 lg:hidden">
         {/* Frame 404: Search Input */}
         <div className="flex h-[45px] flex-1 items-center gap-2 rounded-[10px] bg-[#241612] px-3.5">
           <Search className="size-[18px] shrink-0 text-[#B39463]" strokeWidth={2.5} />
@@ -135,6 +145,7 @@ function HomePage() {
       {/* Mobile Filter Modal */}
       {isMobileFiltersOpen && (
         <div
+          ref={filtersDialogRef}
           role="dialog"
           aria-modal="true"
           aria-label="Filtros de coleções e redes"
@@ -157,6 +168,8 @@ function HomePage() {
                 facets={facets}
                 hideBanner
                 namePrefix="mobile"
+                searchQuery={search.q ?? ''}
+                onSearchChange={(q) => updateSearch({ q })}
                 value={{
                   collection: search.collection,
                   network: search.network,
@@ -185,17 +198,14 @@ function HomePage() {
           Catálogo
         </h2>
 
-        {/* Hidden accessible search for screen-readers / desktop shortcuts */}
-        <div className="absolute -top-14 left-0 z-10 hidden h-8 w-64 opacity-[0.01] transition-opacity focus-within:opacity-100 lg:block">
-          <SearchInput value={search.q ?? ''} onChange={(q) => updateSearch({ q })} />
-        </div>
-
         <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">
           {/* Desktop Filter Sidebar */}
           <div className="hidden lg:block">
             <FilterSidebar
               facets={facets}
               namePrefix="desktop"
+              searchQuery={search.q ?? ''}
+              onSearchChange={(q) => updateSearch({ q })}
               value={{
                 collection: search.collection,
                 network: search.network,
@@ -217,28 +227,37 @@ function HomePage() {
                   aria-label="Abas do catálogo"
                   className="relative flex items-center gap-5 font-mono text-[15px] font-medium leading-4 whitespace-nowrap"
                 >
-                  <button
-                    type="button"
-                    onClick={() => updateSearch({ sort: undefined })}
-                    className="relative cursor-pointer py-1 text-highlight"
-                  >
-                    Todos os NFTs
-                    <span className="absolute -bottom-[10px] left-0 h-[2px] w-[101px] bg-primary" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => updateSearch({ sort: 'newest' })}
-                    className="cursor-pointer py-1 text-foreground transition-colors duration-150 hover:text-highlight"
-                  >
-                    Novos lançamentos
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => updateSearch({ sort: 'price_desc' })}
-                    className="cursor-pointer py-1 text-foreground transition-colors duration-150 hover:text-highlight"
-                  >
-                    Em alta
-                  </button>
+                  {[
+                    { label: 'Todos os NFTs', sort: undefined, active: !search.sort },
+                    {
+                      label: 'Novos lançamentos',
+                      sort: 'newest' as const,
+                      active: search.sort === 'newest',
+                    },
+                    {
+                      label: 'Em alta',
+                      sort: 'price_desc' as const,
+                      active: search.sort === 'price_desc',
+                    },
+                  ].map((tab) => (
+                    <button
+                      key={tab.label}
+                      type="button"
+                      aria-pressed={tab.active}
+                      onClick={() => updateSearch({ sort: tab.sort })}
+                      className={cn(
+                        'relative cursor-pointer py-1 transition-colors duration-150',
+                        tab.active
+                          ? 'font-bold text-highlight'
+                          : 'text-foreground hover:text-highlight',
+                      )}
+                    >
+                      {tab.label}
+                      {tab.active && (
+                        <span className="absolute -bottom-[10px] left-0 h-[2px] w-full bg-primary" />
+                      )}
+                    </button>
+                  ))}
                 </nav>
 
                 <div className="ml-auto flex items-center gap-4">

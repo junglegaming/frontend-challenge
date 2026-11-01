@@ -22,6 +22,50 @@ test('catálogo: busca, filtros combinados e ordenação refletem na URL', async
   await expect(page.getByLabel('Ordenar por')).toHaveValue('price_asc')
 })
 
+test('catálogo: busca desktop visível e URL padrão limpa', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByPlaceholder('Buscar NFTs')).toBeVisible()
+
+  await page.goto('/?page=2')
+  await page.getByRole('link', { name: 'Início' }).filter({ visible: true }).first().click()
+  await expect(page).toHaveURL((url) => url.pathname === '/' && url.search === '')
+})
+
+test('catálogo: limpar filtros remove os parâmetros da URL', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('radio', { name: /Arte digital/ }).check()
+  await page.waitForURL(/collection=/)
+
+  await page.getByRole('button', { name: 'Limpar filtros' }).click()
+  await expect(page).toHaveURL((url) => !url.searchParams.has('collection'))
+})
+
+test('catálogo: aba ativa da ordenação acompanha o filtro', async ({ page }) => {
+  await page.goto('/')
+  const tabs = page.locator('nav[aria-label="Abas do catálogo"]')
+  const all = tabs.getByRole('button', { name: 'Todos os NFTs' })
+  const newest = tabs.getByRole('button', { name: 'Novos lançamentos' })
+
+  await newest.click()
+  await expect(newest).toHaveAttribute('aria-pressed', 'true')
+  await expect(all).toHaveAttribute('aria-pressed', 'false')
+})
+
+test('catálogo: parâmetros inválidos não derrubam a tela', async ({ page }) => {
+  await page.goto('/?network=Bitcoin&page=abc&priceMin=abc')
+  await expect(page.getByText('Something went wrong!')).toHaveCount(0)
+  await expect(page.getByRole('link', { name: /Emerald Ape/i }).first()).toBeVisible()
+})
+
+test('detalhe: miniaturas trocam a arte principal', async ({ page }) => {
+  await page.goto('/nft/nft-1')
+  const main = page.getByAltText('Arte digital de Emerald Ape #042')
+  await expect(main).toHaveAttribute('src', /Frame-136/)
+
+  await page.getByRole('button', { name: 'Visualizar miniatura 2' }).click()
+  await expect(main).toHaveAttribute('src', /NFT-Artwork-05/)
+})
+
 test('catálogo: mudar filtro reinicia a paginação', async ({ page }) => {
   await page.goto('/?page=2')
   await expect(
@@ -29,7 +73,7 @@ test('catálogo: mudar filtro reinicia a paginação', async ({ page }) => {
   ).toBeVisible()
   await page.getByRole('radio', { name: /Ethereum/ }).check()
   await page.waitForURL(/network=Ethereum/)
-  await expect(page).toHaveURL(/page=1/)
+  await expect(page).not.toHaveURL(/page=/)
 })
 
 test('rota inexistente exibe a página 404 com retorno ao catálogo', async ({ page }) => {
@@ -45,7 +89,7 @@ test('catálogo: paginação altera a URL e o histórico restaura', async ({ pag
   await page.waitForURL(/page=2/)
 
   await page.goBack()
-  await expect(page).toHaveURL(/page=1|^\/(\?.*)?$/)
+  await expect(page).toHaveURL((url) => url.pathname === '/' && url.search === '')
 })
 
 test('detalhe: acesso direto e NFT inexistente', async ({ page }) => {

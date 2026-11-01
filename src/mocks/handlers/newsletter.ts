@@ -1,5 +1,6 @@
-import { HttpResponse, http } from 'msw'
+import { http } from 'msw/core/http'
 
+import { json } from '../http'
 import { errorResponse } from '../utils'
 
 const SUBSCRIBED_EMAILS = new Set<string>(['duplicado@kurio.test', 'cadastrado@kurio.test'])
@@ -54,7 +55,7 @@ export const newsletterHandlers = [
     }
 
     SUBSCRIBED_EMAILS.add(email.toLowerCase())
-    return HttpResponse.json({
+    return json({
       success: true,
       message: 'Inscrição realizada com sucesso!',
       email,

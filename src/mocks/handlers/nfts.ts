@@ -1,4 +1,4 @@
-import { HttpResponse, http } from 'msw'
+import { http } from 'msw/core/http'
 
 import {
   type Nft,
@@ -11,6 +11,7 @@ import { compare } from '@/shared/lib/money'
 
 import { getDb } from '../db'
 import { COLLECTIONS, reviewsFor } from '../fixtures'
+import { json } from '../http'
 import { simulateNetwork } from '../scenarios'
 import { errorResponse } from '../utils'
 
@@ -101,7 +102,7 @@ export const nftHandlers = [
       })),
     }
 
-    return HttpResponse.json({
+    return json({
       items: pageItems,
       pagination: { page: query.page, pageSize: query.pageSize, total, totalPages },
       facets,
@@ -113,7 +114,7 @@ export const nftHandlers = [
     if (failure) return failure
     const nft = getDb().nfts.find((n) => n.id === params.id)
     if (!nft) return errorResponse('NOT_FOUND', 'NFT não encontrado', 404)
-    return HttpResponse.json(nft)
+    return json(nft)
   }),
 
   http.get('/api/nfts/:id/reviews', async ({ params }) => {
@@ -123,6 +124,6 @@ export const nftHandlers = [
     if (!getDb().nfts.some((n) => n.id === nftId)) {
       return errorResponse('NOT_FOUND', 'NFT não encontrado', 404)
     }
-    return HttpResponse.json(reviewsFor(nftId))
+    return json(reviewsFor(nftId))
   }),
 ]

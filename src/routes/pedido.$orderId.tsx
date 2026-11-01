@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
 import { Link, createFileRoute, redirect, useNavigate } from '@tanstack/react-router'
@@ -11,6 +11,7 @@ import { orderQueryOptions } from '@/features/orders/api'
 import { DEFAULT_NFT_LIST_QUERY } from '@/shared/contracts'
 import { cn } from '@/shared/lib/cn'
 import { formatEth, mul } from '@/shared/lib/money'
+import { useFocusTrap } from '@/shared/lib/useFocusTrap'
 import { getToken } from '@/shared/session'
 
 export const Route = createFileRoute('/pedido/$orderId')({
@@ -116,10 +117,8 @@ function OrderPage() {
   const dialogRef = useRef<HTMLDivElement>(null)
   const hasOrder = Boolean(orderQuery.data)
 
-  // O recibo abre como diálogo: o foco vai para ele, como num modal.
-  useEffect(() => {
-    if (hasOrder) dialogRef.current?.focus()
-  }, [hasOrder])
+  // O recibo abre como diálogo: o foco fica preso nele até fechar.
+  useFocusTrap(dialogRef, hasOrder)
 
   if (orderQuery.isLoading) {
     return (

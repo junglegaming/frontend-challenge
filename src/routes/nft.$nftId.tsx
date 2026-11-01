@@ -75,7 +75,7 @@ function NftDetailPage() {
   })
 
   const [selectedEditionId, setSelectedEditionId] = useState<string | null>(null)
-  const [selectedThumbnailIdx, setSelectedThumbnailIdx] = useState<number>(1)
+  const [selectedThumbnailIdx, setSelectedThumbnailIdx] = useState<number>(0)
   const [quantity, setQuantity] = useState(1)
   const [isZoomOpen, setIsZoomOpen] = useState(false)
   const [activeDot, setActiveDot] = useState(0)
@@ -129,8 +129,14 @@ function NftDetailPage() {
     (activeRelatedPage + 1) * RELATED_COUNT,
   )
 
-  // 4 thumbnails of the artwork; thumbnail index 1 is active by default (matching Figma)
-  const thumbnails = [mainArtworkUrl, mainArtworkUrl, mainArtworkUrl, mainArtworkUrl]
+  // Galeria: a arte principal primeiro e as demais variações do acervo, sem repetir.
+  const thumbnails = [
+    mainArtworkUrl,
+    '/images/NFT-Artwork-05.webp',
+    '/images/NFT-Artwork-09.webp',
+    '/images/NFT-Artwork-18.webp',
+  ].filter((image, index, images) => images.indexOf(image) === index)
+  const selectedArtworkUrl = thumbnails[selectedThumbnailIdx] ?? mainArtworkUrl
 
   function selectEdition(editionId: string) {
     setSelectedEditionId(editionId)
@@ -453,7 +459,7 @@ function NftDetailPage() {
               {/* Main Image Box: 444px x 444px, bg #241612, inner image 404px x 404px rounded-[24px] */}
               <div className="relative flex size-full max-w-[444px] items-center justify-center rounded-[6px] bg-[#241612] p-4 sm:size-[444px]">
                 <img
-                  src={mainArtworkUrl}
+                  src={selectedArtworkUrl}
                   alt={`Arte digital de ${nft.name}`}
                   fetchPriority="high"
                   className="size-[404px] max-h-full max-w-full rounded-[24px] object-cover"
@@ -841,7 +847,7 @@ function NftDetailPage() {
           </DialogTitle>
           <DialogDescription className="sr-only">Arte ampliada do NFT.</DialogDescription>
           <img
-            src={mainArtworkUrl}
+            src={selectedArtworkUrl}
             alt={`Arte digital de ${nft.name}, ampliada`}
             className="max-h-[75vh] max-w-[80vw] rounded-xl object-contain shadow-2xl"
           />

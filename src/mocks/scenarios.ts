@@ -1,8 +1,5 @@
-import { HttpResponse, delay } from 'msw'
-
 import { type Db, getDb, persist, resetDb } from './db'
 import { dropRealtimeConnections, emitNftUpdated, emitOrderUpdated } from './realtime'
-import { errorResponse } from './utils'
 import { disconnectAllWallets } from './wallet-connections'
 
 /**
@@ -76,13 +73,18 @@ let latencyCursor = 0
  * if (failure) return failure
  */
 export async function simulateNetwork(): Promise<Response | null> {
-  if (state.offline) return HttpResponse.error()
+  if (state.offline) return Response.error()
   const wait = state.variableLatency
     ? VARIABLE_LATENCY_MS[latencyCursor++ % VARIABLE_LATENCY_MS.length]
     : state.fixedLatencyMs
-  if (wait && wait > 0) await delay(wait)
+  if (wait && wait > 0) await new Promise((resolve) => setTimeout(resolve, wait))
   if (state.serverError) {
-    return errorResponse('INTERNAL_ERROR', 'Serviço temporariamente indisponível', 503)
+    return new Response(
+      JSON.stringify({
+        error: { code: 'INTERNAL_ERROR', message: 'Serviço temporariamente indisponível' },
+      }),
+      { status: 503, headers: { 'Content-Type': 'application/json' } },
+    )
   }
   return null
 }

@@ -1,8 +1,9 @@
-import { HttpResponse, http } from 'msw'
+import { http } from 'msw/core/http'
 
 import type { Favorite } from '@/shared/contracts'
 
 import { getDb, persist } from '../db'
+import { json } from '../http'
 import { isFavoriteError, simulateNetwork } from '../scenarios'
 import { errorResponse, getAuthenticatedUser, unauthorized } from '../utils'
 
@@ -19,7 +20,7 @@ export const favoritesHandlers = [
       nftId,
       addedAt: new Date().toISOString(),
     }))
-    return HttpResponse.json({ items })
+    return json({ items })
   }),
 
   http.post('/api/favorites/:nftId', ({ request, params }) => {
@@ -41,7 +42,7 @@ export const favoritesHandlers = [
     }
 
     const favorite: Favorite = { nftId: nft.id, addedAt: new Date().toISOString() }
-    return HttpResponse.json(favorite)
+    return json(favorite)
   }),
 
   http.delete('/api/favorites/:nftId', ({ request, params }) => {
@@ -57,6 +58,6 @@ export const favoritesHandlers = [
       db.favorites[user.id] = ids.filter((id) => id !== params.nftId)
       persist()
     }
-    return new HttpResponse(null, { status: 204 })
+    return new Response(null, { status: 204 })
   }),
 ]

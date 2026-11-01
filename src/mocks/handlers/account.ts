@@ -1,4 +1,4 @@
-import { HttpResponse, delay, http } from 'msw'
+import { http } from 'msw/core/http'
 import type { ZodError } from 'zod'
 
 import type {
@@ -14,6 +14,7 @@ import {
 } from '@/shared/contracts'
 
 import { getDb, hashPassword, persist } from '../db'
+import { json, sleep } from '../http'
 import { isWalletRejected, simulateNetwork } from '../scenarios'
 import { errorResponse, getAuthenticatedUser, unauthorized } from '../utils'
 import { closeWalletConnection, openWalletConnection } from '../wallet-connections'
@@ -48,7 +49,7 @@ export const accountHandlers = [
       email: user.email,
       avatarUrl: user.avatarUrl,
     }
-    return HttpResponse.json(profile)
+    return json(profile)
   }),
 
   http.patch('/api/profile', async ({ request }) => {
@@ -72,7 +73,7 @@ export const accountHandlers = [
       email: user.email,
       avatarUrl: user.avatarUrl,
     }
-    return HttpResponse.json(profile)
+    return json(profile)
   }),
 
   http.post('/api/profile/password', async ({ request }) => {
@@ -93,13 +94,13 @@ export const accountHandlers = [
 
     user.passwordHash = hashPassword(body.newPassword)
     persist()
-    return new HttpResponse(null, { status: 204 })
+    return new Response(null, { status: 204 })
   }),
 
   http.get('/api/wallets', ({ request }) => {
     const user = getAuthenticatedUser(request)
     if (!user) return unauthorized()
-    return HttpResponse.json(getDb().wallets[user.id] ?? [])
+    return json(getDb().wallets[user.id] ?? [])
   }),
 
   http.post('/api/wallets', async ({ request }) => {
@@ -131,7 +132,7 @@ export const accountHandlers = [
     wallets.push(wallet)
     db.wallets[user.id] = wallets
     persist()
-    return HttpResponse.json(wallet, { status: 201 })
+    return json(wallet, { status: 201 })
   }),
 
   http.patch('/api/wallets/:id', async ({ request, params }) => {
@@ -167,7 +168,7 @@ export const accountHandlers = [
 
     db.wallets[user.id] = wallets
     persist()
-    return HttpResponse.json(wallet)
+    return json(wallet)
   }),
 
   /** Conexão simulada: a "extensão" aprova ou recusa (cenário `wallet_rejected`). */
@@ -182,7 +183,7 @@ export const accountHandlers = [
     const wallet = (getDb().wallets[user.id] ?? []).find((w) => w.id === params.id)
     if (!wallet) return errorResponse('NOT_FOUND', 'Carteira não encontrada', 404)
 
-    await delay(WALLET_APPROVAL_MS)
+    await sleep(WALLET_APPROVAL_MS)
     if (isWalletRejected()) {
       return errorResponse('WALLET_REJECTED', 'A conexão foi recusada na carteira.', 409)
     }
@@ -192,13 +193,13 @@ export const accountHandlers = [
       network: parsed.data.network,
       provider: parsed.data.provider,
     })
-    return HttpResponse.json(connection)
+    return json(connection)
   }),
 
   http.delete('/api/wallets/connections/:connectionId', ({ request, params }) => {
     const user = getAuthenticatedUser(request)
     if (!user) return unauthorized()
     closeWalletConnection(user.id, String(params.connectionId))
-    return new HttpResponse(null, { status: 204 })
+    return new Response(null, { status: 204 })
   }),
 ]
