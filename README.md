@@ -101,6 +101,16 @@ npm run test:e2e     # Playwright (Chromium desktop + mobile), relatório HTML e
 npm run lighthouse   # build + Lighthouse mobile e desktop (3 execuções) + resumo
 ```
 
+## Testes e qualidade
+
+- **49 testes unitários** com Vitest: dinheiro em ETH, cupons, filtros de eventos, redirect e helpers.
+- **106 testes E2E** com Playwright: **103 aprovados**, **3 skips intencionais** (abas do detalhe, modal de login desktop e formulário do colecionador no checkout).
+- Os 12 grupos do enunciado rodam em Chromium desktop e mobile.
+- Regressão visual de início, detalhe, carrinho e pagamento com baselines versionadas.
+- Relatório HTML e trace de falhas configurados no Playwright.
+- Axe sem violações críticas nas páginas verificadas; foco preso em diálogos, erros associados aos campos e navegação por teclado cobertos.
+- `typecheck`, `lint`, `format:check` e build passando.
+
 ## Como reproduzir as falhas
 
 Entre com `nova@kurio.test` quando o fluxo exigir sessão.
