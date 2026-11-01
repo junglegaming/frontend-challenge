@@ -21,12 +21,22 @@ export default defineConfig({
     timeout: 120_000,
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+      testIgnore: ['mobile-flows.spec.ts'],
+    },
     {
       // Fluxos principais também no viewport mobile (Chromium).
       name: 'mobile-chromium',
       use: { ...devices['Pixel 7'] },
-      testMatch: ['checkout.spec.ts', 'realtime.spec.ts', 'catalog.spec.ts', 'a11y.spec.ts'],
+      testMatch: [
+        'checkout.spec.ts',
+        'realtime.spec.ts',
+        'catalog.spec.ts',
+        'a11y.spec.ts',
+        'mobile-flows.spec.ts',
+      ],
     },
   ],
 })

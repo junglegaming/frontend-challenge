@@ -84,7 +84,11 @@ export function useRealtimeSync(sessionScope: string): void {
         }
       })
 
-      // Eventos perdidos durante a queda: a REST reconstrói o estado atual.
+      // Reconcilia após a primeira conexão e após quedas: um evento pode ter
+      // acontecido antes de o socket estar pronto.
+      socket.on('connect', () => {
+        void queryClient.invalidateQueries({ type: 'active' })
+      })
       socket.io.on('reconnect', () => {
         void queryClient.invalidateQueries({ type: 'active' })
       })
