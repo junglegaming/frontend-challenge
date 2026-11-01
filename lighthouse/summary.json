@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-11-01T10:51:08.420Z",
+  "environment": {
+    "lighthouse": "12.6.1",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "benchmarkIndex": 3015,
+    "node": "v22.23.3",
+    "os": "Linux 7.2.9-arch1-1"
+  },
+  "results": [
+    {
+      "profile": "mobile",
+      "url": "/",
+      "runs": 3,
+      "scores": {
+        "performance": 91,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "metrics": {
+        "LCP": 2938,
+        "CLS": 0,
+        "TBT": 194,
+        "FCP": 1868
+      },
+      "settings": {
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        }
+      }
+    },
+    {
+      "profile": "mobile",
+      "url": "/nft/nft-1",
+      "runs": 3,
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "metrics": {
+        "LCP": 3063,
+        "CLS": 0,
+        "TBT": 199,
+        "FCP": 2007
+      },
+      "settings": {
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "/",
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "metrics": {
+        "LCP": 768,
+        "CLS": 0,
+        "TBT": 0,
+        "FCP": 527
+      },
+      "settings": {
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        }
+      }
+    },
+    {
+      "profile": "desktop",
+      "url": "/nft/nft-1",
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "metrics": {
+        "LCP": 793,
+        "CLS": 0,
+        "TBT": 0,
+        "FCP": 511
+      },
+      "settings": {
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        }
+      }
+    }
+  ]
+}

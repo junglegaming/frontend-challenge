@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/roboto-mono';
+@import 'tw-animate-css';
+
+/* ============================================================
+ * Design tokens da marca Kurio.
+ * Inclui o mapeamento dos tokens semânticos do shadcn/ui.
+ * ============================================================ */
+@theme {
+  /* ---- Identidade visual (Figma) ---- */
+  --color-canvas: #f5f1eb;
+  --color-ink: #140d0a;
+  --color-primary: #d28a4c;
+  --color-sand: #b39463;
+  --color-highlight: #e89b55;
+  --color-coral: #f0805f;
+  --color-text-secondary: #cfb28c;
+  --color-surface-card: #241612;
+  --color-surface-dark: #38220f;
+  --color-surface-raised: #2f1d15;
+  /* Borda de campos e divisórias das telas (recorrente no Figma). */
+  --color-field: #3f2319;
+  --color-amber: #e3a44e;
+  --color-gray-light: #ededed;
+  --color-success: #00a66c;
+  --color-error: #ed1b2e;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-brand-blue: #4175df;
+  --color-brand-facebook: #3b5999;
+  --color-brand-google-blue: #4086f4;
+  --color-brand-google-green: #59c36a;
+  --color-brand-google-yellow: #ffda2d;
+  --color-brand-indigo: #283593;
+  --color-brand-light-blue: #03a9f4;
+  --color-brand-orange: #ff641a;
+
+  /* ---- shadcn/ui: tokens semânticos (mapeados para Kurio) ---- */
+  --color-background: #140d0a;
+  --color-foreground: #f5f1eb;
+  --color-card: #241612;
+  --color-card-foreground: #f5f1eb;
+  --color-popover: #2f1d15;
+  --color-popover-foreground: #f5f1eb;
+  --color-primary-foreground: #140d0a;
+  --color-secondary: #2f1d15;
+  --color-secondary-foreground: #f5f1eb;
+  --color-muted: #241612;
+  --color-muted-foreground: #cfb28c;
+  --color-accent: #2f1d15;
+  --color-accent-foreground: #e89b55;
+  --color-destructive: #ed1b2e;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #38220f;
+  --color-input: #38220f;
+  --color-ring: #d28a4c;
+
+  /* ---- Tipografia ---- */
+  --font-sans: 'Roboto Mono Variable', 'Roboto Mono', ui-monospace, monospace;
+  --font-mono: 'Roboto Mono Variable', 'Roboto Mono', ui-monospace, monospace;
+
+  /* ---- Raio ---- */
+  --radius: 0.375rem;
+
+  /* ---- Sombras ---- */
+  --shadow-glow: 0 0 20px 0 rgba(10, 6, 4, 0.45);
+  --shadow-button: 0 4px 12px -2px rgba(20, 13, 10, 0.15);
+  --shadow-button-lg: 0 6.6px 19.8px -3.3px rgba(20, 13, 10, 0.15);
+  --shadow-card: 0 6px 20px 0 rgba(10, 6, 4, 0.45);
+  --shadow-wallet: 0 20px 20px 0 rgba(10, 6, 4, 0.45);
+  --shadow-tab-up: 0 -10px 30px 0 rgba(10, 6, 4, 0.45);
+  --shadow-option: 0 0 40px 0 rgba(10, 6, 4, 0.45);
+
+  /* ---- Animações ---- */
+  /* Varre por transform (não background-position) para ficar na GPU, sem repaint. */
+  --animate-shimmer: shimmer 1.6s ease-in-out infinite;
+
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  button,
+  [role='button'],
+  [role='slider'],
+  [role='tab'],
+  [role='radio'],
+  [role='switch'],
+  summary,
+  select,
+  input[type='button'],
+  input[type='submit'],
+  input[type='reset'],
+  input[type='radio'],
+  input[type='checkbox'] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [role='button'][aria-disabled='true'],
+  [aria-disabled='true'],
+  button[disabled],
+  input:disabled,
+  select:disabled {
+    cursor: not-allowed;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* Dual Range Slider Styles */
+.dual-range-input::-webkit-slider-thumb {
+  pointer-events: auto;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d28a4c;
+  border: 3px solid #140d0a;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease;
+}
+
+.dual-range-input::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.dual-range-input::-moz-range-thumb {
+  pointer-events: auto;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #d28a4c;
+  border: 3px solid #140d0a;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease;
+}
+
+.dual-range-input::-moz-range-thumb:hover {
+  transform: scale(1.15);
+}
+
+.dual-range-input::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+}
+
+.dual-range-input::-moz-range-track {
+  background: transparent;
+  border: none;
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "url": "http://localhost:4173/",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/gabriellqv/frontend-challenge/lighthouse/desktop/localhost--2026_11_01_10_50_17.report.html",
+    "jsonPath": "/home/gabriellqv/frontend-challenge/lighthouse/desktop/localhost--2026_11_01_10_50_17.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 0.97,
+      "best-practices": 1,
+      "seo": 0.92
+    }
+  },
+  {
+    "url": "http://localhost:4173/nft/nft-1",
+    "isRepresentativeRun": true,
+    "htmlPath": "/home/gabriellqv/frontend-challenge/lighthouse/desktop/localhost-nft_nft_1-2026_11_01_10_50_57.report.html",
+    "jsonPath": "/home/gabriellqv/frontend-challenge/lighthouse/desktop/localhost-nft_nft_1-2026_11_01_10_50_57.report.json",
+    "summary": {
+      "performance": 1,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 0.92
+    }
+  }
+]

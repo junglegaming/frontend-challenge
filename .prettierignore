@@ -1,0 +1,24 @@
+# Dependências e build
+node_modules/
+dist/
+build/
+coverage/
+public/mockServiceWorker.js
+src/routeTree.gen.ts
+
+# Artefatos locais de design
+design/
+
+# Documentação local de planejamento (não rastreada)
+docs/
+
+# README original do enunciado (substituído no F10)
+
+# Husky
+.husky/_/
+
+# Claude Code (config local)
+.claude/
+
+# Relatórios gerados pelo Lighthouse (entregues como estão)
+lighthouse/
